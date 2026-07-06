@@ -36,13 +36,13 @@ const differentiators = [
 ];
 
 export function DifferentiatorsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const section = sectionRef.current;
+    const grid = gridRef.current;
 
-    if (!section) return;
+    if (!grid) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -52,19 +52,18 @@ export function DifferentiatorsSection() {
         }
       },
       {
-        threshold: 0.18,
-        rootMargin: "0px 0px -80px 0px",
+        threshold: 0.25,
+        rootMargin: "0px 0px -120px 0px",
       }
     );
 
-    observer.observe(section);
+    observer.observe(grid);
 
     return () => observer.disconnect();
   }, []);
 
   return (
     <section
-      ref={sectionRef}
       id="perche-scegliermi"
       className="relative overflow-hidden bg-[var(--pink-light)] py-20 sm:py-24 lg:py-28"
     >
@@ -74,7 +73,7 @@ export function DifferentiatorsSection() {
             Perché scegliere Martinails Lab
           </p>
 
-          <h2 className="text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
+          <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
             Unghie curate, eleganti e pensate per te
             <span className="text-[var(--pink)]">.</span>
           </h2>
@@ -87,17 +86,20 @@ export function DifferentiatorsSection() {
           </p>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div
+          ref={gridRef}
+          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+        >
           {differentiators.map((item, index) => (
             <article
               key={item.title}
-              className={`group relative min-h-[250px] overflow-hidden border border-[var(--border)] bg-white p-8 transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[var(--pink)] hover:shadow-[0_24px_60px_rgba(217,140,160,0.16)] ${
+              className={`group relative min-h-[250px] overflow-hidden border border-[var(--border)] bg-white p-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:border-[var(--pink)] hover:shadow-[0_24px_60px_rgba(217,140,160,0.16)] ${
                 isVisible
                   ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
+                  : "translate-y-10 opacity-0"
               }`}
               style={{
-                transitionDelay: isVisible ? `${index * 110}ms` : "0ms",
+                transitionDelay: isVisible ? `${index * 120}ms` : "0ms",
               }}
             >
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">

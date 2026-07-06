@@ -13,7 +13,7 @@ export function LocationSection() {
               Dove mi trovi
             </p>
 
-            <h2 className="max-w-[520px] text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
+            <h2 className="js-split-title max-w-[520px] text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
               Il tuo momento di bellezza in uno spazio dedicato
               <span className="text-[var(--pink)]">.</span>
             </h2>

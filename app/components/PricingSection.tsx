@@ -69,7 +69,7 @@ export function PricingSection() {
             Listino prezzi
           </p>
 
-          <h2 className="text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
+          <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
             Trattamenti chiari, cura su misura
             <span className="text-[var(--pink)]">.</span>
           </h2>

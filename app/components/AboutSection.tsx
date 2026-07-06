@@ -105,7 +105,7 @@ export function AboutSection() {
               Chi sono
             </p>
 
-            <h2 className="max-w-[560px] text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
+            <h2 className="js-split-title max-w-[560px] text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
               La cura dei dettagli nasce dalla passione
               <span className="text-[var(--pink)]">.</span>
             </h2>

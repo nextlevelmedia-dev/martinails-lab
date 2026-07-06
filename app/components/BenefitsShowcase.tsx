@@ -37,7 +37,7 @@ export function BenefitsShowcase() {
             I miei servizi
           </p>
 
-          <h2 className="text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
+          <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
             Trattamenti pensati per te
             <span className="text-[var(--pink)]">.</span>
           </h2>
@@ -78,7 +78,7 @@ export function BenefitsShowcase() {
                     {benefit.eyebrow}
                   </p>
 
-                  <h3 className="max-w-[480px] text-[36px] font-normal leading-[1.05] tracking-[-0.025em] sm:text-[44px] lg:text-[48px]">
+                  <h3 className="js-split-title max-w-[480px] text-[36px] font-normal leading-[1.05] tracking-[-0.025em] sm:text-[44px] lg:text-[48px]">
                     {benefit.title}
                     <span className="text-[var(--pink)]">.</span>
                   </h3>

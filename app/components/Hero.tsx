@@ -28,7 +28,7 @@ export function Hero() {
               Nail art e decorazione
             </p>
 
-            <h1 className="max-w-[540px] text-[43px] font-normal leading-[0.98] tracking-[-0.035em] text-black sm:text-[52px] lg:text-[64px]">
+            <h1 className="js-split-title max-w-[540px] text-[43px] font-normal leading-[0.98] tracking-[-0.035em] text-black sm:text-[52px] lg:text-[64px]">
               Nail art e decorazioni per unghie uniche e raffinate
               <span className="text-[var(--pink)]">.</span>
             </h1>
