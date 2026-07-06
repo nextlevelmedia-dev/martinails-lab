@@ -8,7 +8,6 @@ export function LocationSection() {
     >
       <div className="container-site">
         <div className="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-          {/* Testo */}
           <div>
             <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
               Dove mi trovi
@@ -42,25 +41,18 @@ export function LocationSection() {
             </div>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#prenota"
-                className="btn-primary"
-              >
+              <a href="#prenota" className="btn-primary">
                 Prenota ora
                 <span aria-hidden="true">→</span>
               </a>
 
-              <a
-                href="#"
-                className="btn-secondary"
-              >
+              <a href="#" className="btn-secondary">
                 Apri la mappa
                 <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
 
-          {/* Immagine studio */}
           <div className="relative">
             <div className="relative overflow-hidden bg-[var(--gray)]">
               <div className="relative aspect-[4/3] w-full lg:aspect-[1.35/1]">
@@ -74,7 +66,6 @@ export function LocationSection() {
               </div>
             </div>
 
-            {/* Stella decorativa */}
             <span
               aria-hidden="true"
               className="pointer-events-none absolute -right-4 -top-7 z-10 text-[70px] leading-none text-[var(--pink)] opacity-30 sm:-right-6 sm:-top-9 sm:text-[90px]"
@@ -82,7 +73,6 @@ export function LocationSection() {
               ✧
             </span>
 
-            {/* Etichetta */}
             <div className="absolute bottom-4 left-4 bg-white px-5 py-4 shadow-[0_14px_40px_rgba(17,17,17,0.10)] sm:bottom-6 sm:left-6 sm:px-6">
               <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--pink)]">
                 Martinails Lab
