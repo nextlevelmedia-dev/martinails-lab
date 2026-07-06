@@ -52,8 +52,8 @@ export function DifferentiatorsSection() {
         }
       },
       {
-        threshold: 0.25,
-        rootMargin: "0px 0px -120px 0px",
+        threshold: 0.01,
+        rootMargin: "0px 0px 120px 0px",
       }
     );
 
@@ -96,10 +96,10 @@ export function DifferentiatorsSection() {
               className={`group relative min-h-[250px] overflow-hidden border border-[var(--border)] bg-white p-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:border-[var(--pink)] hover:shadow-[0_24px_60px_rgba(217,140,160,0.16)] ${
                 isVisible
                   ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
+                  : "translate-y-6 opacity-0"
               }`}
               style={{
-                transitionDelay: isVisible ? `${index * 120}ms` : "0ms",
+                transitionDelay: isVisible ? `${index * 90}ms` : "0ms",
               }}
             >
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
