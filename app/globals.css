@@ -138,3 +138,115 @@ img {
     width: 100%;
   }
 }
+
+/* ========================================
+   PEARL SPARKLES
+======================================== */
+
+.sparkle {
+  color: rgba(255, 255, 255, 0.95);
+  opacity: 0.25;
+  filter:
+    drop-shadow(0 0 3px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.55));
+
+  animation: sparkleShine 3.2s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.sparkle-slow {
+  animation-duration: 4.6s;
+}
+
+.sparkle-delay-1 {
+  animation-delay: -0.8s;
+}
+
+.sparkle-delay-2 {
+  animation-delay: -1.7s;
+}
+
+.sparkle-delay-3 {
+  animation-delay: -2.5s;
+}
+
+
+.pearl {
+  display: block;
+  border-radius: 999px;
+
+  background:
+    radial-gradient(
+      circle at 32% 28%,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.95) 20%,
+      rgba(255, 245, 248, 0.75) 45%,
+      rgba(255, 255, 255, 0.15) 72%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 5px rgba(255, 255, 255, 0.95),
+    0 0 14px rgba(255, 255, 255, 0.65),
+    0 0 28px rgba(255, 255, 255, 0.3);
+
+  animation: pearlGlow 4s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.pearl-delay-1 {
+  animation-delay: -1s;
+}
+
+.pearl-delay-2 {
+  animation-delay: -2.1s;
+}
+
+.pearl-delay-3 {
+  animation-delay: -3s;
+}
+
+
+@keyframes sparkleShine {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: scale(0.75) rotate(-8deg);
+  }
+
+  45% {
+    opacity: 0.55;
+  }
+
+  55% {
+    opacity: 1;
+    transform: scale(1.12) rotate(5deg);
+  }
+
+  70% {
+    opacity: 0.4;
+  }
+}
+
+
+@keyframes pearlGlow {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .sparkle,
+  .pearl {
+    animation: none;
+    opacity: 0.55;
+  }
+}
