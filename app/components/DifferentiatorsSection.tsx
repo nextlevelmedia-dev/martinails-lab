@@ -3,33 +3,33 @@ import type { CSSProperties } from "react";
 const differentiators = [
   {
     number: "01",
-    title: "Stile su misura",
-    text: "Ogni decorazione viene pensata in base alla tua mano, ai tuoi gusti e all’occasione.",
+    title: "Nail art personalizzata",
+    text: "Ogni proposta viene adattata ai tuoi gusti, alla forma delle tue mani e allo stile che ami.",
   },
   {
     number: "02",
-    title: "Dettagli raffinati",
-    text: "Linee pulite, colori armoniosi e piccoli dettagli che rendono ogni lavoro riconoscibile.",
+    title: "Precisione nelle lavorazioni",
+    text: "Forme, lunghezze e decorazioni vengono realizzate con attenzione per un risultato pulito e armonioso.",
   },
   {
     number: "03",
-    title: "Cura professionale",
-    text: "Ogni trattamento viene eseguito con attenzione, precisione e rispetto della salute dell’unghia.",
+    title: "Prodotti selezionati",
+    text: "Prodotti scelti con attenzione per offrire qualità, affidabilità e rispetto dell’unghia naturale.",
   },
   {
     number: "04",
-    title: "Igiene garantita",
-    text: "Ambiente curato, strumenti sanificati e massima attenzione a ogni fase del servizio.",
+    title: "Igiene e sicurezza",
+    text: "Strumenti sanificati e postazione ordinata per svolgere ogni trattamento in un ambiente sicuro e accogliente.",
   },
   {
     number: "05",
-    title: "Risultato armonioso",
-    text: "Forma, colore e decorazione vengono bilanciati per valorizzare la mano con eleganza.",
+    title: "Formazione continua",
+    text: "Tecniche e competenze sempre aggiornate per proporti trattamenti moderni e lavorazioni sempre più precise.",
   },
   {
     number: "06",
-    title: "Esperienza rilassante",
-    text: "Un momento dedicato a te, in un’atmosfera intima, ordinata e accogliente.",
+    title: "Nail art & gossip",
+    text: "Il tuo appuntamento diventa anche un momento leggero, tra relax, chiacchiere e un po’ di sano gossip.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function DifferentiatorsSection() {
           </p>
 
           <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
-            Unghie curate, eleganti e pensate per te
+            Un’esperienza pensata per farti sentire davvero a tuo agio
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
@@ -62,8 +62,9 @@ export function DifferentiatorsSection() {
             className="js-reveal mx-auto mt-6 max-w-[590px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]"
             style={{ "--reveal-delay": "420ms" } as CSSProperties}
           >
-            Un servizio attento ai dettagli, dove estetica, igiene e stile si
-            incontrano per creare un risultato raffinato e personale.
+            Dalla personalizzazione alla qualità dei prodotti, ogni scelta è
+            pensata per offrirti un risultato armonioso e un’esperienza
+            piacevole, sicura e sempre professionale.
           </p>
         </div>
 
@@ -115,7 +116,7 @@ export function DifferentiatorsSection() {
           style={{ "--reveal-delay": "1050ms" } as CSSProperties}
         >
           <a href="#prenota" className="btn-primary">
-            Prenota il tuo appuntamento
+            Scrivimi su WhatsApp
             <span aria-hidden="true">→</span>
           </a>
         </div>

@@ -1,66 +1,48 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { useEffect, useRef, useState } from "react";
 
 const prices = [
   {
-    name: "Manicure semplice",
-    detail: "Pulizia, forma e cura dell’unghia naturale",
+    name: "Manicure normale",
+    detail: "Pulizia, forma e cura dell’unghia naturale.",
     price: "20 €",
   },
   {
-    name: "Copertura BI-FLEX",
-    detail: "Rinforzo leggero per unghie curate e resistenti",
-    price: "45 €",
-  },
-  {
-    name: "Copertura gel original",
-    detail: "Decorazioni comprese nel prezzo",
+    name: "Gel flessibile",
+    detail: "Copertura leggera e confortevole per unghie curate e resistenti.",
     price: "50 €",
   },
   {
-    name: "Allungamento",
-    detail: "Ricostruzione con forma studiata sulla mano",
-    price: "80 €",
+    name: "Gel rigido",
+    detail: "Copertura più strutturata per un risultato resistente, definito e duraturo.",
+    price: "55 €",
   },
   {
-    name: "Stickers 3D",
-    detail: "Dettagli decorativi extra",
-    price: "1 €",
+    name: "Allungamento",
+    detail: "Ricostruzione con lunghezza e forma studiate in base alla mano.",
+    price: "85 €",
+  },
+  {
+    name: "Allungamento con muretto",
+    detail: "Ricostruzione elaborata con tecnica muretto.",
+    price: "Da 145 €",
+  },
+  {
+    name: "Unghia con muretto",
+    detail: "Durante semplice copertura gel.",
+    price: "+5 € l’una",
+  },
+  {
+    name: "Disegni e applicazioni",
+    detail: "Decorazioni incluse nel trattamento.",
+    price: "Gratis",
   },
 ];
 
 export function PricingSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-
-    if (!section) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.18,
-        rootMargin: "0px 0px -80px 0px",
-      }
-    );
-
-    observer.observe(section);
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
       id="listino-prezzi"
       className="relative overflow-hidden bg-[var(--pink-light)] py-20 sm:py-24 lg:py-28"
     >
@@ -74,7 +56,7 @@ export function PricingSection() {
           </p>
 
           <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
-            Trattamenti chiari, cura su misura
+            Scegli il trattamento più adatto a te
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
@@ -87,8 +69,8 @@ export function PricingSection() {
             className="js-reveal mx-auto mt-6 max-w-[580px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]"
             style={{ "--reveal-delay": "420ms" } as CSSProperties}
           >
-            Prezzi semplici e trasparenti per scegliere il trattamento più
-            adatto alle tue esigenze.
+            Consulta i trattamenti disponibili e trova la soluzione più adatta
+            alle tue unghie, alle tue esigenze e al risultato che desideri.
           </p>
         </div>
 
@@ -96,14 +78,12 @@ export function PricingSection() {
           {prices.map((item, index) => (
             <div
               key={item.name}
-              className={`group grid gap-4 border-b border-[var(--border)] px-6 py-7 transition-all duration-500 last:border-b-0 hover:bg-[var(--pink-light)] active:bg-[var(--pink-light)] sm:grid-cols-[1fr_auto] sm:items-center sm:px-8 lg:px-10 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-6 opacity-0"
-              }`}
-              style={{
-                transitionDelay: isVisible ? `${index * 110}ms` : "0ms",
-              }}
+              className="js-reveal group grid gap-4 border-b border-[var(--border)] px-6 py-7 transition-all duration-500 last:border-b-0 hover:bg-[var(--pink-light)] active:bg-[var(--pink-light)] sm:grid-cols-[1fr_auto] sm:items-center sm:px-8 lg:px-10"
+              style={
+                {
+                  "--reveal-delay": `${150 + index * 110}ms`,
+                } as CSSProperties
+              }
             >
               <div>
                 <h3 className="text-[28px] font-normal leading-[1.08] tracking-[-0.025em] sm:text-[32px]">
@@ -125,10 +105,10 @@ export function PricingSection() {
 
         <div
           className="js-reveal js-reveal-cta mt-10 flex justify-center"
-          style={{ "--reveal-delay": "180ms" } as CSSProperties}
+          style={{ "--reveal-delay": "950ms" } as CSSProperties}
         >
           <a href="#prenota" className="btn-primary">
-            Prenota ora
+            Scrivimi su WhatsApp
             <span aria-hidden="true">→</span>
           </a>
         </div>

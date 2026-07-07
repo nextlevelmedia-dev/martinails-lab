@@ -107,7 +107,7 @@ export function AboutSection() {
               style={{ "--reveal-delay": "660ms" } as CSSProperties}
             >
               <a href="#servizi" className="btn-secondary">
-                Scopri i servizi
+                Scrivimi su WhatsApp
                 <span aria-hidden="true">→</span>
               </a>
             </div>

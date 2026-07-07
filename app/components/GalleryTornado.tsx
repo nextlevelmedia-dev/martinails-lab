@@ -249,7 +249,7 @@ export function GalleryTornado() {
           </p>
 
           <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
-            Dettagli, colori e ispirazioni
+            Trova l’ispirazione per il tuo prossimo stile
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
@@ -262,7 +262,7 @@ export function GalleryTornado() {
             className="js-reveal mx-auto mt-6 max-w-[560px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]"
             style={{ "--reveal-delay": "420ms" } as CSSProperties}
           >
-            Una selezione di lavori, dettagli e decorazioni realizzate con cura.
+            Colori, forme e nail art diverse, per lasciarti ispirare e trovare quella che senti più tua.
           </p>
         </div>
       </div>

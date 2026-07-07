@@ -70,7 +70,7 @@ export function IntroSection() {
           </p>
 
           <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] text-[var(--foreground)] sm:text-[50px] lg:text-[58px]">
-            La tua bellezza, valorizzata con cura
+            La tua bellezza, espressa con naturalezza
             <span className="text-[var(--pink)]">.</span>
           </h2>
 

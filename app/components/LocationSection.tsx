@@ -18,7 +18,7 @@ export function LocationSection() {
             </p>
 
             <h2 className="js-split-title max-w-[520px] text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
-              Il tuo momento di bellezza in uno spazio dedicato
+              Il tuo momento di bellezza, in uno spazio pensato per te
               <span className="text-[var(--pink)]">.</span>
             </h2>
 
@@ -31,9 +31,7 @@ export function LocationSection() {
               className="js-reveal mt-7 max-w-[500px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]"
               style={{ "--reveal-delay": "420ms" } as CSSProperties}
             >
-              Ricevo presso lo studio di Simona Acconciature, in un ambiente
-              curato e accogliente dove ogni appuntamento diventa un momento
-              dedicato interamente a te.
+              Ricevo presso lo studio di Simona Acconciature, in un ambiente accogliente dove puoi rilassarti e dedicare del tempo a te e alla bellezza delle tue mani.
             </p>
 
             <div
@@ -63,7 +61,7 @@ export function LocationSection() {
               </a>
 
               <a href="#" className="btn-secondary">
-                Apri la mappa
+                Vedi la mappa
                 <span aria-hidden="true">↗</span>
               </a>
             </div>
