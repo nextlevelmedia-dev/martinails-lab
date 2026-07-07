@@ -25,6 +25,63 @@ const benefits = [
   },
 ];
 
+const imageSparkles = [
+  [
+    {
+      className:
+        "sparkle sparkle-slow absolute bottom-[36%] left-[58%] text-[16px] sm:text-[20px]",
+    },
+    {
+      className:
+        "sparkle sparkle-delay-1 absolute bottom-[54%] left-[72%] text-[12px] sm:text-[16px]",
+    },
+    {
+      className:
+        "sparkle sparkle-delay-2 absolute bottom-[24%] left-[82%] text-[10px] sm:text-[14px]",
+    },
+    {
+      className:
+        "pearl pearl-delay-3 absolute bottom-[46%] left-[42%] h-[5px] w-[5px] sm:h-[7px] sm:w-[7px]",
+    },
+  ],
+  [
+    {
+      className:
+        "sparkle sparkle-delay-1 absolute bottom-[42%] left-[48%] text-[15px] sm:text-[19px]",
+    },
+    {
+      className:
+        "sparkle sparkle-slow absolute bottom-[58%] left-[66%] text-[12px] sm:text-[16px]",
+    },
+    {
+      className:
+        "sparkle sparkle-delay-2 absolute bottom-[28%] left-[76%] text-[10px] sm:text-[14px]",
+    },
+    {
+      className:
+        "pearl pearl-delay-3 absolute bottom-[31%] left-[68%] h-[5px] w-[5px] sm:h-[7px] sm:w-[7px]",
+    },
+  ],
+  [
+    {
+      className:
+        "sparkle sparkle-slow absolute bottom-[45%] left-[62%] text-[15px] sm:text-[19px]",
+    },
+    {
+      className:
+        "sparkle sparkle-delay-2 absolute bottom-[27%] left-[74%] text-[12px] sm:text-[16px]",
+    },
+    {
+      className:
+        "sparkle sparkle-delay-1 absolute bottom-[60%] left-[46%] text-[10px] sm:text-[14px]",
+    },
+    {
+      className:
+        "pearl pearl-delay-3 absolute bottom-[38%] left-[84%] h-[5px] w-[5px] sm:h-[7px] sm:w-[7px]",
+    },
+  ],
+];
+
 export function BenefitsShowcase() {
   return (
     <section
@@ -60,12 +117,27 @@ export function BenefitsShowcase() {
                 key={benefit.title}
                 className="grid items-center gap-8 lg:grid-cols-2 lg:gap-20"
               >
-                <div className={isReverse ? "lg:order-2" : "lg:order-1"}>
+                <div
+                  className={`relative ${
+                    isReverse ? "lg:order-2" : "lg:order-1"
+                  }`}
+                >
                   <RevealImage
                     src={benefit.image}
                     alt={benefit.alt}
                     direction={isReverse ? "right" : "left"}
                   />
+
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 z-20 overflow-hidden"
+                  >
+                    {imageSparkles[index].map((sparkle, sparkleIndex) => (
+                      <span key={sparkleIndex} className={sparkle.className}>
+                        {sparkle.className.includes("pearl") ? "" : "✦"}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 <div className={isReverse ? "lg:order-1" : "lg:order-2"}>
