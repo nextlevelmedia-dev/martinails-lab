@@ -95,30 +95,30 @@ export function Header() {
             </a>
 
             <button
-              type="button"
-              onClick={() => setIsOpen((current) => !current)}
-              className="relative flex h-11 w-9 flex-col items-center justify-center gap-[7px]"
-              aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
-              aria-expanded={isOpen}
-            >
-              <span
-                className={`block h-px w-8 bg-black transition-all duration-300 ${
-                  isOpen ? "translate-y-[8px] rotate-45" : ""
-                }`}
-              />
+  type="button"
+  onClick={() => setIsOpen((current) => !current)}
+  className="relative flex size-11 shrink-0 flex-col items-center justify-center gap-[10px]"
+  aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
+  aria-expanded={isOpen}
+>
+  <span
+    className={`block h-px w-8 bg-black transition-all duration-300 ${
+      isOpen ? "translate-y-[11px] rotate-45" : ""
+    }`}
+  />
 
-              <span
-                className={`block h-px w-8 bg-black transition-all duration-300 ${
-                  isOpen ? "opacity-0" : ""
-                }`}
-              />
+  <span
+    className={`block h-px w-8 bg-black transition-all duration-300 ${
+      isOpen ? "opacity-0" : ""
+    }`}
+  />
 
-              <span
-                className={`block h-px w-8 bg-black transition-all duration-300 ${
-                  isOpen ? "-translate-y-[8px] -rotate-45" : ""
-                }`}
-              />
-            </button>
+  <span
+    className={`block h-px w-8 bg-black transition-all duration-300 ${
+      isOpen ? "-translate-y-[11px] -rotate-45" : ""
+    }`}
+  />
+</button>
           </div>
         </div>
       </header>

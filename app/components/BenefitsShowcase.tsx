@@ -98,7 +98,7 @@ export function BenefitsShowcase() {
           </p>
 
           <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
-            Il trattamento giusto per prenderti cura delle tue unghie
+            Il trattamento perfetto per unghie curate e armoniose
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
