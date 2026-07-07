@@ -97,12 +97,12 @@ export function AboutSection() {
             </p>
 
             <blockquote
-              className="js-reveal mt-8 max-w-[520px] border-l border-[var(--pink)] pl-6 text-[24px] font-normal leading-[1.22] tracking-[-0.025em] text-[var(--foreground)] sm:text-[28px]"
-              style={{ "--reveal-delay": "520ms" } as CSSProperties}
-            >
-              “Ogni mano è diversa. Il mio lavoro è trovare lo stile capace di
-              valorizzarla.”
-            </blockquote>
+  className="js-reveal mt-8 max-w-[520px] border-l border-[var(--pink)] pl-6 text-[24px] font-normal italic leading-[1.22] tracking-[-0.025em] text-[var(--foreground)] sm:text-[28px]"
+  style={{ "--reveal-delay": "520ms" } as CSSProperties}
+>
+  “Ogni mano è diversa. Il mio lavoro è trovare lo stile capace di
+  valorizzarla.”
+</blockquote>
 
             <div
               className="js-reveal js-reveal-cta mt-9"
