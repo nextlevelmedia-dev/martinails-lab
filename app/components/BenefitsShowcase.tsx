@@ -3,25 +3,25 @@ import { RevealImage } from "./RevealImage";
 
 const benefits = [
   {
-    eyebrow: "Trattamenti su misura",
+    eyebrow: "Struttura e armonia",
     title: "Ricostruzione unghie",
-    text: "Ideale per chi desidera unghie più resistenti, curate e armoniose, con una forma studiata in base alla mano.",
+    text: "Se desideri unghie più resistenti, curate e armoniose, con una forma studiata per valorizzare le tue mani.",
     image: "/images/showcase1.webp",
     alt: "Ricostruzione unghie",
   },
   {
-    eyebrow: "Creatività e stile",
-    title: "Nail art personalizzata",
-    text: "Colori, dettagli e decorazioni realizzate con cura per creare uno stile personale e valorizzare ogni mano.",
+    eyebrow: "Naturalezza e flessibilità",
+    title: "Gel B-Flex",
+    text: "Se desideri un risultato naturale, sottile e confortevole, che rinforzi le tue unghie mantenendo un aspetto leggero e armonioso.",
     image: "/images/showcase2.webp",
-    alt: "Nail art personalizzata",
+    alt: "Gel B-Flex",
   },
   {
-    eyebrow: "Eleganza nei dettagli",
-    title: "Decorazioni raffinate",
-    text: "Composizioni curate e dettagli eleganti per chi desidera unghie originali, armoniose e sempre riconoscibili.",
+    eyebrow: "Resistenza e brillantezza",
+    title: "Gel Original",
+    text: "Se desideri unghie definite, eleganti e resistenti, con un risultato curato che mantiene bellezza e brillantezza nel tempo.",
     image: "/images/showcase3.webp",
-    alt: "Decorazioni nail art raffinate",
+    alt: "Gel Original",
   },
 ];
 
@@ -41,7 +41,7 @@ export function BenefitsShowcase() {
           </p>
 
           <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
-            Trattamenti pensati per te
+            Il trattamento giusto per valorizzare le tue unghie
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
@@ -98,7 +98,7 @@ export function BenefitsShowcase() {
                     style={{ "--reveal-delay": "560ms" } as CSSProperties}
                   >
                     <a href="#listino-prezzi" className="btn-primary">
-                      Scopri il servizio
+                      Scrivimi su WhatsApp
                       <span aria-hidden="true">→</span>
                     </a>
                   </div>

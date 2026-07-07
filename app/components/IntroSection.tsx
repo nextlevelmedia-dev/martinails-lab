@@ -70,7 +70,7 @@ export function IntroSection() {
           </p>
 
           <h2 className="js-split-title text-[40px] font-normal leading-[1.02] tracking-[-0.03em] text-[var(--foreground)] sm:text-[50px] lg:text-[58px]">
-            Ogni dettaglio fa la differenza
+            La tua bellezza, valorizzata con cura
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
@@ -83,9 +83,7 @@ export function IntroSection() {
             className="js-reveal mx-auto mt-7 max-w-[660px] text-[15px] leading-[1.9] text-[var(--gray-dark)] sm:text-[16px] lg:text-[17px]"
             style={{ "--reveal-delay": "420ms" } as CSSProperties}
           >
-            Non si tratta solo di avere unghie belle. Ogni trattamento nasce
-            dall&apos;ascolto delle tue esigenze, dalla cura dei dettagli e
-            dalla scelta di uno stile che ti rappresenti davvero.
+            Ogni trattamento nasce dall’ascolto delle tue esigenze, dalla cura delle tue mani e dalla scelta di uno stile che sappia valorizzarti, rappresentarti davvero e farti sentire sempre a tuo agio.
           </p>
 
           <div
@@ -93,7 +91,7 @@ export function IntroSection() {
             style={{ "--reveal-delay": "560ms" } as CSSProperties}
           >
             <a href="#chi-sono" className="btn-secondary">
-              Scopri chi sono
+              Scrivimi su WhatsApp
               <span aria-hidden="true">→</span>
             </a>
           </div>

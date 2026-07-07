@@ -14,7 +14,7 @@ const trustItems = [
   },
   {
     icon: "♡",
-    title: "Passione in ogni dettaglio",
+    title: "Passione in ogni creazione",
     text: "	Ogni nail art è creata con dedizione",
   },
 ];
