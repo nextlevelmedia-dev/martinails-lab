@@ -97,7 +97,7 @@ export function BenefitsShowcase() {
                     className="js-reveal js-reveal-cta mt-8"
                     style={{ "--reveal-delay": "560ms" } as CSSProperties}
                   >
-                    <a href="#listino-prezzi" className="btn-secondary">
+                    <a href="#listino-prezzi" className="btn-primary">
                       Scopri il servizio
                       <span aria-hidden="true">→</span>
                     </a>

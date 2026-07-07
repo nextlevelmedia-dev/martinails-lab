@@ -4,18 +4,18 @@ import { RevealImage } from "./RevealImage";
 const trustItems = [
   {
     icon: "✧",
-    title: "Prodotti di qualità",
-    text: "Selezionati e sicuri",
+    title: "Prodotti scelti con cura",
+    text: "Qualità e sicurezza per le tue unghie",
   },
   {
     icon: "◷",
-    title: "Precisione e cura",
-    text: "Per ogni dettaglio",
+    title: "Precisione in ogni dettaglio",
+    text: "Cura e attenzione in ogni creazione",
   },
   {
     icon: "♡",
-    title: "Igiene garantita",
-    text: "Ambiente sanificato",
+    title: "Passione in ogni dettaglio",
+    text: "	Ogni nail art è creata con dedizione",
   },
 ];
 
@@ -33,7 +33,7 @@ export function Hero() {
             </p>
 
             <h1 className="js-split-title max-w-[540px] text-[43px] font-normal leading-[0.98] tracking-[-0.035em] text-black sm:text-[52px] lg:text-[64px]">
-              Nail art e decorazioni per unghie uniche e raffinate
+              Esprimi chi sei con unghie raffinate che valorizzano il tuo stile e la tua personalità
               <span className="text-[var(--pink)]">.</span>
             </h1>
 
@@ -46,8 +46,7 @@ export function Hero() {
               className="js-reveal mt-6 max-w-[520px] text-[16px] leading-[1.8] text-[var(--gray-dark)] lg:text-[17px]"
               style={{ "--reveal-delay": "420ms" } as CSSProperties}
             >
-              Dalle decorazioni semplici alle creazioni più elaborate, per mani
-              sempre perfette e alla moda.
+              Dalle decorazioni più delicate alle creazioni più elaborate, ogni nail art è pensata per valorizzare le tue mani, completare il tuo look e raccontare qualcosa di te in ogni dettaglio.
             </p>
 
             <div
@@ -55,7 +54,7 @@ export function Hero() {
               style={{ "--reveal-delay": "560ms" } as CSSProperties}
             >
               <a href="#prenota" className="btn-primary">
-                Prenota ora
+                Scrivimi su WhatsApp
                 <span aria-hidden="true">→</span>
               </a>
 
