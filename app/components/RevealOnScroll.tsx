@@ -12,15 +12,8 @@ export function RevealOnScroll() {
 
     if (!elements.length) return;
 
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReducedMotion) {
-      elements.forEach((element) => {
-        element.classList.add("is-visible");
-      });
-
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      elements.forEach((element) => element.classList.add("is-visible"));
       return;
     }
 
@@ -30,24 +23,19 @@ export function RevealOnScroll() {
           if (!entry.isIntersecting) return;
 
           const element = entry.target as HTMLElement;
-
           element.classList.add("is-visible");
           observer.unobserve(element);
         });
       },
       {
-        threshold: 0.05,
-        rootMargin: "0px 0px 80px 0px",
+        threshold: 0.16,
+        ootMargin: "0px 0px 120px 0px",
       }
     );
 
-    elements.forEach((element) => {
-      observer.observe(element);
-    });
+    elements.forEach((element) => observer.observe(element));
 
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   return null;
