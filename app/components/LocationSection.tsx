@@ -1,4 +1,5 @@
-import Image from "next/image";
+import type { CSSProperties } from "react";
+import { RevealImage } from "./RevealImage";
 
 export function LocationSection() {
   return (
@@ -9,7 +10,10 @@ export function LocationSection() {
       <div className="container-site">
         <div className="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
+            <p
+              className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+              style={{ "--reveal-delay": "100ms" } as CSSProperties}
+            >
               Dove mi trovi
             </p>
 
@@ -18,15 +22,24 @@ export function LocationSection() {
               <span className="text-[var(--pink)]">.</span>
             </h2>
 
-            <div className="mt-7 h-[2px] w-16 bg-[var(--pink)]" />
+            <div
+              className="js-reveal mt-7 h-[2px] w-16 bg-[var(--pink)]"
+              style={{ "--reveal-delay": "300ms" } as CSSProperties}
+            />
 
-            <p className="mt-7 max-w-[500px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]">
+            <p
+              className="js-reveal mt-7 max-w-[500px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]"
+              style={{ "--reveal-delay": "420ms" } as CSSProperties}
+            >
               Ricevo presso lo studio di Simona Acconciature, in un ambiente
               curato e accogliente dove ogni appuntamento diventa un momento
               dedicato interamente a te.
             </p>
 
-            <div className="mt-8 border-l-2 border-[var(--pink)] pl-5">
+            <div
+              className="js-reveal mt-8 border-l-2 border-[var(--pink)] pl-5"
+              style={{ "--reveal-delay": "520ms" } as CSSProperties}
+            >
               <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-[var(--pink)]">
                 Indirizzo
               </p>
@@ -40,7 +53,10 @@ export function LocationSection() {
               </p>
             </div>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div
+              className="js-reveal js-reveal-cta mt-9 flex flex-col gap-3 sm:flex-row"
+              style={{ "--reveal-delay": "660ms" } as CSSProperties}
+            >
               <a href="#prenota" className="btn-primary">
                 Prenota ora
                 <span aria-hidden="true">→</span>
@@ -54,17 +70,13 @@ export function LocationSection() {
           </div>
 
           <div className="relative">
-            <div className="relative overflow-hidden bg-[var(--gray)]">
-              <div className="relative aspect-[4/3] w-full lg:aspect-[1.35/1]">
-                <Image
-                  src="/images/Dietro-le-quinte.webp"
-                  alt="Studio Martinails Lab"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 55vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
+            <RevealImage
+              src="/images/Dietro-le-quinte.webp"
+              alt="Studio Martinails Lab"
+              direction="right"
+              aspectClassName="aspect-[4/3] lg:aspect-[1.35/1]"
+              sizes="(max-width: 1024px) 100vw, 55vw"
+            />
 
             <span
               aria-hidden="true"
@@ -73,7 +85,7 @@ export function LocationSection() {
               ✧
             </span>
 
-            <div className="absolute bottom-4 left-4 bg-white px-5 py-4 shadow-[0_14px_40px_rgba(17,17,17,0.10)] sm:bottom-6 sm:left-6 sm:px-6">
+            <div className="absolute bottom-4 left-4 z-10 bg-white px-5 py-4 shadow-[0_14px_40px_rgba(17,17,17,0.10)] sm:bottom-6 sm:left-6 sm:px-6">
               <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--pink)]">
                 Martinails Lab
               </p>

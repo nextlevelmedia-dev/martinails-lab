@@ -1,35 +1,7 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import { RevealImage } from "./RevealImage";
 
 export function AboutSection() {
-  const textRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const element = textRef.current;
-
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.2,
-        rootMargin: "0px 0px -80px 0px",
-      }
-    );
-
-    observer.observe(element);
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="chi-sono"
@@ -93,15 +65,11 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div
-            ref={textRef}
-            className={`order-1 transition-all duration-[1100ms] ease-out lg:order-2 ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-8 opacity-0"
-            }`}
-          >
-            <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
+          <div className="order-1 lg:order-2">
+            <p
+              className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+              style={{ "--reveal-delay": "100ms" } as CSSProperties}
+            >
               Chi sono
             </p>
 
@@ -110,9 +78,15 @@ export function AboutSection() {
               <span className="text-[var(--pink)]">.</span>
             </h2>
 
-            <div className="mt-7 h-[2px] w-16 bg-[var(--pink)]" />
+            <div
+              className="js-reveal mt-7 h-[2px] w-16 bg-[var(--pink)]"
+              style={{ "--reveal-delay": "300ms" } as CSSProperties}
+            />
 
-            <p className="mt-7 max-w-[540px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]">
+            <p
+              className="js-reveal mt-7 max-w-[540px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]"
+              style={{ "--reveal-delay": "420ms" } as CSSProperties}
+            >
               Sono Martina e la nail art è il mio modo di unire precisione,
               creatività e attenzione per i dettagli. Ogni trattamento nasce
               dall’ascolto, dalla cura e dalla voglia di creare qualcosa di
@@ -120,12 +94,18 @@ export function AboutSection() {
               valorizzarne lo stile con eleganza e personalità.
             </p>
 
-            <blockquote className="mt-8 max-w-[520px] border-l border-[var(--pink)] pl-6 text-[24px] font-normal leading-[1.22] tracking-[-0.025em] text-[var(--foreground)] sm:text-[28px]">
+            <blockquote
+              className="js-reveal mt-8 max-w-[520px] border-l border-[var(--pink)] pl-6 text-[24px] font-normal leading-[1.22] tracking-[-0.025em] text-[var(--foreground)] sm:text-[28px]"
+              style={{ "--reveal-delay": "520ms" } as CSSProperties}
+            >
               “Ogni mano è diversa. Il mio lavoro è trovare lo stile capace di
               valorizzarla.”
             </blockquote>
 
-            <div className="mt-9">
+            <div
+              className="js-reveal js-reveal-cta mt-9"
+              style={{ "--reveal-delay": "660ms" } as CSSProperties}
+            >
               <a href="#servizi" className="btn-secondary">
                 Scopri i servizi
                 <span aria-hidden="true">→</span>

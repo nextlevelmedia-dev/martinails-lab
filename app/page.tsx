@@ -10,12 +10,15 @@ import { FaqSection } from "./components/FaqSection";
 import { LocationSection } from "./components/LocationSection";
 import { Footer } from "./components/Footer";
 import { SplitTextEffect } from "./components/SplitTextEffect";
+import { RevealOnScroll } from "./components/RevealOnScroll";
 
 export default function Home() {
   return (
     <>
       <Header />
+
       <SplitTextEffect />
+      <RevealOnScroll />
 
       <main>
         <Hero />

@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { RevealImage } from "./RevealImage";
 
 const trustItems = [
@@ -24,7 +25,10 @@ export function Hero() {
       <div className="container-site">
         <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div className="order-2 lg:order-1">
-            <p className="mb-5 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)] lg:mb-6">
+            <p
+              className="js-reveal mb-5 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)] lg:mb-6"
+              style={{ "--reveal-delay": "100ms" } as CSSProperties}
+            >
               Nail art e decorazione
             </p>
 
@@ -33,14 +37,23 @@ export function Hero() {
               <span className="text-[var(--pink)]">.</span>
             </h1>
 
-            <div className="mt-6 h-[2px] w-20 bg-[var(--pink)]" />
+            <div
+              className="js-reveal mt-6 h-[2px] w-20 bg-[var(--pink)]"
+              style={{ "--reveal-delay": "300ms" } as CSSProperties}
+            />
 
-            <p className="mt-6 max-w-[520px] text-[16px] leading-[1.8] text-[var(--gray-dark)] lg:text-[17px]">
+            <p
+              className="js-reveal mt-6 max-w-[520px] text-[16px] leading-[1.8] text-[var(--gray-dark)] lg:text-[17px]"
+              style={{ "--reveal-delay": "420ms" } as CSSProperties}
+            >
               Dalle decorazioni semplici alle creazioni più elaborate, per mani
               sempre perfette e alla moda.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:mt-9">
+            <div
+              className="js-reveal js-reveal-cta mt-8 flex flex-col gap-3 sm:flex-row lg:mt-9"
+              style={{ "--reveal-delay": "560ms" } as CSSProperties}
+            >
               <a href="#prenota" className="btn-primary">
                 Prenota ora
                 <span aria-hidden="true">→</span>
@@ -56,11 +69,16 @@ export function Hero() {
               {trustItems.map((item, index) => (
                 <div
                   key={item.title}
-                  className={`flex flex-col items-start gap-2 ${
+                  className={`js-reveal flex flex-col items-start gap-2 ${
                     index !== 0
                       ? "border-l border-[var(--border)] pl-3 lg:pl-6"
                       : ""
                   }`}
+                  style={
+                    {
+                      "--reveal-delay": `${index * 120}ms`,
+                    } as CSSProperties
+                  }
                 >
                   <span className="shrink-0 text-[26px] leading-none text-[var(--pink)] lg:text-[30px]">
                     {item.icon}

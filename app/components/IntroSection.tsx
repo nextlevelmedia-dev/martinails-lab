@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 export function IntroSection() {
   return (
     <section
@@ -60,7 +62,10 @@ export function IntroSection() {
 
       <div className="container-site relative z-10">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-5 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
+          <p
+            className="js-reveal mb-5 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+            style={{ "--reveal-delay": "100ms" } as CSSProperties}
+          >
             Cura e attenzione
           </p>
 
@@ -69,15 +74,24 @@ export function IntroSection() {
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
-          <div className="mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]" />
+          <div
+            className="js-reveal mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]"
+            style={{ "--reveal-delay": "300ms" } as CSSProperties}
+          />
 
-          <p className="mx-auto mt-7 max-w-[660px] text-[15px] leading-[1.9] text-[var(--gray-dark)] sm:text-[16px] lg:text-[17px]">
+          <p
+            className="js-reveal mx-auto mt-7 max-w-[660px] text-[15px] leading-[1.9] text-[var(--gray-dark)] sm:text-[16px] lg:text-[17px]"
+            style={{ "--reveal-delay": "420ms" } as CSSProperties}
+          >
             Non si tratta solo di avere unghie belle. Ogni trattamento nasce
             dall&apos;ascolto delle tue esigenze, dalla cura dei dettagli e
             dalla scelta di uno stile che ti rappresenti davvero.
           </p>
 
-          <div className="mt-9 flex justify-center">
+          <div
+            className="js-reveal js-reveal-cta mt-9 flex justify-center"
+            style={{ "--reveal-delay": "560ms" } as CSSProperties}
+          >
             <a href="#chi-sono" className="btn-secondary">
               Scopri chi sono
               <span aria-hidden="true">→</span>

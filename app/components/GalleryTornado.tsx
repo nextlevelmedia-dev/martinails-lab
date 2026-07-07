@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -240,7 +241,10 @@ export function GalleryTornado() {
     >
       <div className="container-site">
         <div className="mx-auto mb-12 max-w-[720px] text-center lg:mb-16">
-          <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
+          <p
+            className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+            style={{ "--reveal-delay": "100ms" } as CSSProperties}
+          >
             Gallery
           </p>
 
@@ -249,9 +253,15 @@ export function GalleryTornado() {
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
-          <div className="mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]" />
+          <div
+            className="js-reveal mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]"
+            style={{ "--reveal-delay": "300ms" } as CSSProperties}
+          />
 
-          <p className="mx-auto mt-6 max-w-[560px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]">
+          <p
+            className="js-reveal mx-auto mt-6 max-w-[560px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]"
+            style={{ "--reveal-delay": "420ms" } as CSSProperties}
+          >
             Una selezione di lavori, dettagli e decorazioni realizzate con cura.
           </p>
         </div>

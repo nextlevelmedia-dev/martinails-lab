@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
 
 const prices = [
@@ -61,11 +62,14 @@ export function PricingSection() {
     <section
       ref={sectionRef}
       id="listino-prezzi"
-      className="relative overflow-hidden bg-[var(--background)] py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[var(--pink-light)] py-20 sm:py-24 lg:py-28"
     >
       <div className="container-site">
         <div className="mx-auto mb-14 max-w-[760px] text-center lg:mb-16">
-          <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
+          <p
+            className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+            style={{ "--reveal-delay": "100ms" } as CSSProperties}
+          >
             Listino prezzi
           </p>
 
@@ -74,9 +78,15 @@ export function PricingSection() {
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
-          <div className="mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]" />
+          <div
+            className="js-reveal mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]"
+            style={{ "--reveal-delay": "300ms" } as CSSProperties}
+          />
 
-          <p className="mx-auto mt-6 max-w-[580px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]">
+          <p
+            className="js-reveal mx-auto mt-6 max-w-[580px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]"
+            style={{ "--reveal-delay": "420ms" } as CSSProperties}
+          >
             Prezzi semplici e trasparenti per scegliere il trattamento più
             adatto alle tue esigenze.
           </p>
@@ -86,7 +96,7 @@ export function PricingSection() {
           {prices.map((item, index) => (
             <div
               key={item.name}
-              className={`group grid gap-4 border-b border-[var(--border)] px-6 py-7 transition-all duration-500 last:border-b-0 hover:bg-[var(--pink-light)] sm:grid-cols-[1fr_auto] sm:items-center sm:px-8 lg:px-10 ${
+              className={`group grid gap-4 border-b border-[var(--border)] px-6 py-7 transition-all duration-500 last:border-b-0 hover:bg-[var(--pink-light)] active:bg-[var(--pink-light)] sm:grid-cols-[1fr_auto] sm:items-center sm:px-8 lg:px-10 ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-6 opacity-0"
@@ -97,9 +107,9 @@ export function PricingSection() {
             >
               <div>
                 <h3 className="text-[28px] font-normal leading-[1.08] tracking-[-0.025em] sm:text-[32px]">
-  {item.name}
-  <span className="text-[var(--pink)]">.</span>
-</h3>
+                  {item.name}
+                  <span className="text-[var(--pink)]">.</span>
+                </h3>
 
                 <p className="mt-2 max-w-[520px] text-[14px] leading-[1.7] text-[var(--gray-dark)] sm:text-[15px]">
                   {item.detail}
@@ -113,7 +123,10 @@ export function PricingSection() {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div
+          className="js-reveal js-reveal-cta mt-10 flex justify-center"
+          style={{ "--reveal-delay": "180ms" } as CSSProperties}
+        >
           <a href="#prenota" className="btn-primary">
             Prenota ora
             <span aria-hidden="true">→</span>

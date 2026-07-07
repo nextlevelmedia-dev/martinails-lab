@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useState } from "react";
 
 const faqs = [
@@ -44,33 +45,41 @@ export function FaqSection() {
     >
       <div className="container-site">
         <div className="grid gap-14 lg:grid-cols-[0.72fr_1.28fr] lg:gap-24">
-          {/* Colonna sinistra */}
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
+            <p
+              className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+              style={{ "--reveal-delay": "100ms" } as CSSProperties}
+            >
               Le risposte che cercavi
             </p>
 
-            <h2 className="max-w-[440px] text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
+            <h2 className="js-split-title max-w-[440px] text-[40px] font-normal leading-[1.02] tracking-[-0.03em] sm:text-[50px] lg:text-[58px]">
               Domande frequenti
               <span className="text-[var(--pink)]">.</span>
             </h2>
 
-            <div className="mt-7 h-[2px] w-16 bg-[var(--pink)]" />
+            <div
+              className="js-reveal mt-7 h-[2px] w-16 bg-[var(--pink)]"
+              style={{ "--reveal-delay": "300ms" } as CSSProperties}
+            />
 
-            <p className="mt-7 max-w-[420px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]">
+            <p
+              className="js-reveal mt-7 max-w-[420px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]"
+              style={{ "--reveal-delay": "420ms" } as CSSProperties}
+            >
               Tutto quello che può esserti utile sapere prima di scegliere il
               tuo prossimo trattamento.
             </p>
 
             <div
               aria-hidden="true"
-              className="mt-12 hidden select-none text-[110px] font-light leading-none text-[var(--pink)] opacity-20 lg:block"
+              className="js-reveal mt-12 hidden select-none text-[110px] font-light leading-none text-[var(--pink)] opacity-20 lg:block"
+              style={{ "--reveal-delay": "540ms" } as CSSProperties}
             >
               ✧
             </div>
           </div>
 
-          {/* Accordion */}
           <div className="border-t border-[var(--border)]">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
@@ -78,7 +87,12 @@ export function FaqSection() {
               return (
                 <div
                   key={faq.question}
-                  className="border-b border-[var(--border)]"
+                  className="js-reveal border-b border-[var(--border)]"
+                  style={
+                    {
+                      "--reveal-delay": `${160 + index * 90}ms`,
+                    } as CSSProperties
+                  }
                 >
                   <button
                     type="button"

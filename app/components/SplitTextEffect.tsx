@@ -54,7 +54,7 @@ export function SplitTextEffect() {
 
                 const wordWrapper = document.createElement("span");
                 wordWrapper.className =
-                  "split-word inline-block overflow-hidden align-baseline";
+                  "split-word inline-block overflow-hidden align-bottom pb-[0.18em] -mb-[0.18em]";
 
                 const wordInner = document.createElement("span");
                 wordInner.className = "split-word-inner inline-block";
@@ -65,7 +65,15 @@ export function SplitTextEffect() {
               });
             } else if (node.nodeType === Node.ELEMENT_NODE) {
               const clone = node.cloneNode(true) as HTMLElement;
-              clone.classList.add("split-word", "inline-block", "overflow-hidden");
+
+              clone.classList.add(
+                "split-word",
+                "inline-block",
+                "overflow-hidden",
+                "align-bottom",
+                "pb-[0.18em]",
+                "-mb-[0.18em]"
+              );
 
               const inner = document.createElement("span");
               inner.className = "split-word-inner inline-block";
@@ -82,18 +90,20 @@ export function SplitTextEffect() {
           );
 
           gsap.set(words, {
-            yPercent: 110,
-            rotate: 2,
+            yPercent: 105,
+            rotate: 0.6,
             opacity: 0,
+            filter: "blur(3px)",
           });
 
           gsap.to(words, {
             yPercent: 0,
             rotate: 0,
             opacity: 1,
-            duration: 1.05,
-            ease: "power4.out",
-            stagger: 0.045,
+            filter: "blur(0px)",
+            duration: 1.45,
+            ease: "expo.out",
+            stagger: 0.075,
             scrollTrigger: {
               trigger: element,
               start: "top 82%",

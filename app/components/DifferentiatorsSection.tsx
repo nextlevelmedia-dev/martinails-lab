@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 
 const differentiators = [
   {
@@ -36,32 +34,6 @@ const differentiators = [
 ];
 
 export function DifferentiatorsSection() {
-  const gridRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const grid = gridRef.current;
-
-    if (!grid) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.01,
-        rootMargin: "0px 0px 120px 0px",
-      }
-    );
-
-    observer.observe(grid);
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="perche-scegliermi"
@@ -69,7 +41,10 @@ export function DifferentiatorsSection() {
     >
       <div className="container-site">
         <div className="mx-auto mb-14 max-w-[760px] text-center lg:mb-16">
-          <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
+          <p
+            className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+            style={{ "--reveal-delay": "100ms" } as CSSProperties}
+          >
             Perché scegliere Martinails Lab
           </p>
 
@@ -78,32 +53,34 @@ export function DifferentiatorsSection() {
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
-          <div className="mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]" />
+          <div
+            className="js-reveal mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]"
+            style={{ "--reveal-delay": "300ms" } as CSSProperties}
+          />
 
-          <p className="mx-auto mt-6 max-w-[590px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]">
+          <p
+            className="js-reveal mx-auto mt-6 max-w-[590px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]"
+            style={{ "--reveal-delay": "420ms" } as CSSProperties}
+          >
             Un servizio attento ai dettagli, dove estetica, igiene e stile si
             incontrano per creare un risultato raffinato e personale.
           </p>
         </div>
 
-        <div
-          ref={gridRef}
-          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
-        >
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {differentiators.map((item, index) => (
             <article
               key={item.title}
-              className={`group relative min-h-[250px] overflow-hidden border border-[var(--border)] bg-white p-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:border-[var(--pink)] hover:shadow-[0_24px_60px_rgba(217,140,160,0.16)] ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-6 opacity-0"
-              }`}
-              style={{
-                transitionDelay: isVisible ? `${index * 90}ms` : "0ms",
-              }}
+              className="js-reveal group relative min-h-[250px] overflow-hidden border border-[var(--border)] bg-white p-8 hover:-translate-y-2 hover:border-[var(--pink)] hover:shadow-[0_24px_60px_rgba(217,140,160,0.16)]"
+              style={
+                {
+                  "--reveal-delay": `${150 + index * 140}ms`,
+                } as CSSProperties
+              }
             >
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 <div className="absolute -right-16 -top-16 h-40 w-40 bg-[var(--pink-soft)] blur-3xl" />
+
                 <div className="absolute -bottom-20 left-1/2 h-40 w-40 -translate-x-1/2 bg-[var(--pink-light)] blur-3xl" />
               </div>
 
@@ -133,7 +110,10 @@ export function DifferentiatorsSection() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div
+          className="js-reveal js-reveal-cta mt-12 flex justify-center"
+          style={{ "--reveal-delay": "1050ms" } as CSSProperties}
+        >
           <a href="#prenota" className="btn-primary">
             Prenota il tuo appuntamento
             <span aria-hidden="true">→</span>

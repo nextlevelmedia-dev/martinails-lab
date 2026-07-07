@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { RevealImage } from "./RevealImage";
 
 const benefits = [
@@ -31,9 +32,11 @@ export function BenefitsShowcase() {
       className="bg-[var(--background)] py-20 sm:py-24 lg:py-28"
     >
       <div className="container-site">
-        {/* Header */}
         <div className="mx-auto mb-16 max-w-[720px] text-center lg:mb-20">
-          <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
+          <p
+            className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+            style={{ "--reveal-delay": "100ms" } as CSSProperties}
+          >
             I miei servizi
           </p>
 
@@ -42,10 +45,12 @@ export function BenefitsShowcase() {
             <span className="text-[var(--pink)]">.</span>
           </h2>
 
-          <div className="mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]" />
+          <div
+            className="js-reveal mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]"
+            style={{ "--reveal-delay": "300ms" } as CSSProperties}
+          />
         </div>
 
-        {/* Showcase */}
         <div className="space-y-20 lg:space-y-28">
           {benefits.map((benefit, index) => {
             const isReverse = index % 2 === 1;
@@ -55,12 +60,7 @@ export function BenefitsShowcase() {
                 key={benefit.title}
                 className="grid items-center gap-8 lg:grid-cols-2 lg:gap-20"
               >
-                {/* Immagine */}
-                <div
-                  className={
-                    isReverse ? "lg:order-2" : "lg:order-1"
-                  }
-                >
+                <div className={isReverse ? "lg:order-2" : "lg:order-1"}>
                   <RevealImage
                     src={benefit.image}
                     alt={benefit.alt}
@@ -68,13 +68,11 @@ export function BenefitsShowcase() {
                   />
                 </div>
 
-                {/* Testo */}
-                <div
-                  className={
-                    isReverse ? "lg:order-1" : "lg:order-2"
-                  }
-                >
-                  <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--pink)]">
+                <div className={isReverse ? "lg:order-1" : "lg:order-2"}>
+                  <p
+                    className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--pink)]"
+                    style={{ "--reveal-delay": "100ms" } as CSSProperties}
+                  >
                     {benefit.eyebrow}
                   </p>
 
@@ -83,17 +81,23 @@ export function BenefitsShowcase() {
                     <span className="text-[var(--pink)]">.</span>
                   </h3>
 
-                  <div className="mt-6 h-[2px] w-14 bg-[var(--pink)]" />
+                  <div
+                    className="js-reveal mt-6 h-[2px] w-14 bg-[var(--pink)]"
+                    style={{ "--reveal-delay": "300ms" } as CSSProperties}
+                  />
 
-                  <p className="mt-6 max-w-[500px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]">
+                  <p
+                    className="js-reveal mt-6 max-w-[500px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]"
+                    style={{ "--reveal-delay": "420ms" } as CSSProperties}
+                  >
                     {benefit.text}
                   </p>
 
-                  <div className="mt-8">
-                    <a
-                      href="#listino-prezzi"
-                      className="btn-secondary"
-                    >
+                  <div
+                    className="js-reveal js-reveal-cta mt-8"
+                    style={{ "--reveal-delay": "560ms" } as CSSProperties}
+                  >
+                    <a href="#listino-prezzi" className="btn-secondary">
                       Scopri il servizio
                       <span aria-hidden="true">→</span>
                     </a>
