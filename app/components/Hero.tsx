@@ -68,7 +68,7 @@ export function Hero() {
                 <span aria-hidden="true">→</span>
               </a>
 
-              <a href="#gallery" className="btn-secondary">
+              <a href="/gallery" className="btn-secondary">
                 Scopri la galleria
                 <span aria-hidden="true">→</span>
               </a>
