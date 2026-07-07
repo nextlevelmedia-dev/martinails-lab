@@ -307,7 +307,7 @@ export function GalleryTornado() {
       </div>
 
       <div
-  className="container-site js-reveal js-reveal-cta mt-14 flex justify-center sm:mt-16 lg:mt-20"
+  className="container-site js-reveal js-reveal-cta mt-24 flex justify-center sm:mt-28 lg:mt-32"
   style={{ "--reveal-delay": "100ms" } as CSSProperties}
 >
         <Link href="/gallery" className="btn-primary">
