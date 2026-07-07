@@ -82,13 +82,42 @@ export function Hero() {
 
           <div className="relative order-1 lg:order-2">
             <RevealImage
-              src="/images/hero.png"
-              alt="Nail art elegante con decorazioni rosa e nere"
+              src="/images/hero.webp"
+              alt="Nail art rosa realizzata da Martinails Lab"
               direction="right"
               aspectClassName="aspect-[4/3] lg:aspect-square"
               priority
               sizes="(max-width: 1024px) 100vw, 55vw"
             />
+
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 z-20 overflow-hidden"
+            >
+              <span className="sparkle sparkle-slow absolute bottom-[16%] left-[11%] text-[22px] sm:text-[26px] lg:text-[30px]">
+                ✦
+              </span>
+
+              <span className="sparkle sparkle-delay-1 absolute bottom-[34%] left-[24%] text-[18px] sm:text-[22px]">
+                ✧
+              </span>
+
+              <span className="sparkle sparkle-delay-2 absolute bottom-[9%] left-[32%] text-[13px] sm:text-[16px]">
+                ✦
+              </span>
+
+              <span className="pearl pearl-delay-1 absolute bottom-[27%] left-[7%] h-[9px] w-[9px] sm:h-[12px] sm:w-[12px]" />
+
+              <span className="pearl pearl-delay-3 absolute bottom-[8%] left-[20%] h-[5px] w-[5px] sm:h-[7px] sm:w-[7px]" />
+
+              <span className="absolute bottom-[42%] left-[8%] h-[3px] w-[3px] rounded-full bg-white opacity-80 shadow-[0_0_9px_rgba(255,255,255,0.95)]" />
+
+              <span className="absolute bottom-[19%] left-[38%] h-[4px] w-[4px] rounded-full bg-white opacity-70 shadow-[0_0_10px_rgba(255,255,255,0.95)]" />
+
+              <span className="absolute bottom-[5%] left-[7%] text-[9px] text-white opacity-70 drop-shadow-[0_0_6px_rgba(255,255,255,0.9)]">
+                ✧
+              </span>
+            </div>
           </div>
         </div>
       </div>

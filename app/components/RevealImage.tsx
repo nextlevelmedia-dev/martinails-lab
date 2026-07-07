@@ -92,7 +92,7 @@ export function RevealImage({
           fill
           priority={priority}
           sizes={sizes}
-          className="object-cover brightness-[1.16] contrast-[0.88] saturate-[0.82]"
+          className="object-cover brightness-[1.04] contrast-[0.98] saturate-[0.97] sepia-[0.025]"
         />
 
         {/* Riflesso luminoso */}
