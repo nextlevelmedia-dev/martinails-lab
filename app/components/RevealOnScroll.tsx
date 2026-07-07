@@ -29,7 +29,7 @@ export function RevealOnScroll() {
       },
       {
         threshold: 0.16,
-        rootMargin: "0px 0px 120px 0px",
+        rootMargin: "0px 0px 30px 0px",
       }
     );
 
