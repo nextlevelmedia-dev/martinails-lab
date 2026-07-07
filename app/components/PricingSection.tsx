@@ -2,6 +2,8 @@
 
 import type { CSSProperties } from "react";
 
+const whatsappUrl = "https://wa.me/393926788551";
+
 const prices = [
   {
     name: "Manicure normale",
@@ -15,12 +17,14 @@ const prices = [
   },
   {
     name: "Gel rigido",
-    detail: "Copertura più strutturata per un risultato resistente, definito e duraturo.",
+    detail:
+      "Copertura più strutturata per un risultato resistente, definito e duraturo.",
     price: "55 €",
   },
   {
     name: "Allungamento",
-    detail: "Ricostruzione con lunghezza e forma studiate in base alla mano.",
+    detail:
+      "Ricostruzione con lunghezza e forma studiate in base alla mano.",
     price: "85 €",
   },
   {
@@ -107,7 +111,12 @@ export function PricingSection() {
           className="js-reveal js-reveal-cta mt-10 flex justify-center"
           style={{ "--reveal-delay": "950ms" } as CSSProperties}
         >
-          <a href="#prenota" className="btn-primary">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
             Scrivimi su WhatsApp
             <span aria-hidden="true">→</span>
           </a>

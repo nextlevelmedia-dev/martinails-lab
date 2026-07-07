@@ -1,6 +1,8 @@
 import type { CSSProperties } from "react";
 import { RevealImage } from "./RevealImage";
 
+const whatsappUrl = "https://wa.me/393926788551";
+
 const benefits = [
   {
     eyebrow: "Struttura e armonia",
@@ -169,7 +171,12 @@ export function BenefitsShowcase() {
                     className="js-reveal js-reveal-cta mt-8"
                     style={{ "--reveal-delay": "560ms" } as CSSProperties}
                   >
-                    <a href="#listino-prezzi" className="btn-primary">
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                    >
                       Scrivimi su WhatsApp
                       <span aria-hidden="true">→</span>
                     </a>

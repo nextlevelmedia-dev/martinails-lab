@@ -2,28 +2,36 @@
 
 import type { CSSProperties } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Observer } from "gsap/Observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const galleryImages = [
-  "/images/tornado/gallery1.JPG",
-  "/images/tornado/gallery2.JPG",
-  "/images/tornado/gallery3.JPG",
-  "/images/tornado/gallery4.JPG",
-  "/images/tornado/gallery5.JPG",
-  "/images/tornado/gallery6.JPG",
-  "/images/tornado/gallery7.JPG",
-  "/images/tornado/gallery8.JPG",
+  "/images/tornado/gallery1.webp",
+  "/images/tornado/gallery2.webp",
+  "/images/tornado/gallery3.webp",
+  "/images/tornado/gallery4.webp",
+  "/images/tornado/gallery5.webp",
+  "/images/tornado/gallery6.webp",
+  "/images/tornado/gallery7.webp",
+  "/images/tornado/gallery8.webp",
+  "/images/tornado/gallery9.webp",
+  "/images/tornado/gallery10.webp",
+  "/images/tornado/gallery11.webp",
+  "/images/tornado/gallery12.webp",
+  "/images/tornado/gallery13.webp",
+  "/images/tornado/gallery14.webp",
+  "/images/tornado/gallery15.webp",
+  "/images/tornado/gallery16.webp",
+  "/images/tornado/gallery17.webp",
+  "/images/tornado/gallery18.webp",
+  "/images/tornado/gallery19.webp",
+  "/images/tornado/gallery20.webp",
 ];
 
-const CARD_COPIES = 4;
-
-const tornadoImages = Array.from(
-  { length: galleryImages.length * CARD_COPIES },
-  (_, index) => galleryImages[index % galleryImages.length]
-);
+const tornadoImages = galleryImages;
 
 export function GalleryTornado() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -37,7 +45,10 @@ export function GalleryTornado() {
 
     if (!section || !list) return;
 
-    const cards = gsap.utils.toArray<HTMLElement>("[data-tornado-item]", list);
+    const cards = gsap.utils.toArray<HTMLElement>(
+      "[data-tornado-item]",
+      list
+    );
 
     if (!cards.length) return;
 
@@ -262,39 +273,47 @@ export function GalleryTornado() {
             className="js-reveal mx-auto mt-6 max-w-[560px] text-[15px] leading-[1.8] text-[var(--gray-dark)] sm:text-[16px]"
             style={{ "--reveal-delay": "420ms" } as CSSProperties}
           >
-            Colori, forme e nail art diverse, per lasciarti ispirare e trovare quella che senti più tua.
+            Colori, forme e nail art diverse, per lasciarti ispirare e trovare
+            quella che senti più tua.
           </p>
         </div>
       </div>
 
-      <div className="relative h-[560px] w-full overflow-hidden sm:h-[640px] lg:h-[720px]">
+      <div className="relative mt-14 h-[560px] w-full overflow-hidden sm:mt-16 sm:h-[640px] lg:mt-20 lg:h-[720px]">
         <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-32 bg-gradient-to-b from-white to-transparent sm:h-40" />
+
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 h-32 bg-gradient-to-t from-white to-transparent sm:h-40" />
 
         <div
           ref={listRef}
           className="relative h-full w-full [perspective:75em] [transform-style:preserve-3d]"
         >
-          {tornadoImages.map((src, index) => {
-            const originalIndex = index % galleryImages.length;
-
-            return (
-              <div
-                key={`${src}-${index}`}
-                data-tornado-item
-                className="invisible absolute left-1/2 top-1/2 h-[220px] w-[176px] overflow-hidden bg-[var(--gray)] [backface-visibility:visible] [transform-style:preserve-3d] will-change-transform sm:h-[260px] sm:w-[208px] lg:h-[300px] lg:w-[240px]"
-              >
-                <Image
-                  src={src}
-                  alt={`Nail art Martinails Lab ${originalIndex + 1}`}
-                  fill
-                  sizes="(max-width: 640px) 176px, (max-width: 1024px) 208px, 240px"
-                  className="pointer-events-none select-none object-cover brightness-[1.08] contrast-[0.92] saturate-[0.9]"
-                />
-              </div>
-            );
-          })}
+          {tornadoImages.map((src, index) => (
+            <div
+              key={`${src}-${index}`}
+              data-tornado-item
+              className="invisible absolute left-1/2 top-1/2 h-[220px] w-[176px] overflow-hidden bg-[var(--gray)] [backface-visibility:visible] [transform-style:preserve-3d] will-change-transform sm:h-[260px] sm:w-[208px] lg:h-[300px] lg:w-[240px]"
+            >
+              <Image
+                src={src}
+                alt={`Nail art Martinails Lab ${index + 1}`}
+                fill
+                sizes="(max-width: 640px) 176px, (max-width: 1024px) 208px, 240px"
+                className="pointer-events-none select-none object-cover brightness-[1.08] contrast-[0.92] saturate-[0.9]"
+              />
+            </div>
+          ))}
         </div>
+      </div>
+
+      <div
+  className="container-site js-reveal js-reveal-cta mt-14 flex justify-center sm:mt-16 lg:mt-20"
+  style={{ "--reveal-delay": "100ms" } as CSSProperties}
+>
+        <Link href="/gallery" className="btn-primary">
+          Vedi tutte le creazioni
+          <span aria-hidden="true">→</span>
+        </Link>
       </div>
     </section>
   );

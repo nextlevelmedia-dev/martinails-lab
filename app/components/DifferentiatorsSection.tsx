@@ -1,5 +1,7 @@
 import type { CSSProperties } from "react";
 
+const whatsappUrl = "https://wa.me/393926788551";
+
 const differentiators = [
   {
     number: "01",
@@ -115,7 +117,12 @@ export function DifferentiatorsSection() {
           className="js-reveal js-reveal-cta mt-12 flex justify-center"
           style={{ "--reveal-delay": "1050ms" } as CSSProperties}
         >
-          <a href="#prenota" className="btn-primary">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
             Scrivimi su WhatsApp
             <span aria-hidden="true">→</span>
           </a>

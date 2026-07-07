@@ -19,6 +19,8 @@ const trustItems = [
   },
 ];
 
+const whatsappUrl = "https://wa.me/393926788551";
+
 export function Hero() {
   return (
     <section id="home" className="pt-28 pb-20 lg:pt-40 lg:pb-24">
@@ -56,7 +58,12 @@ export function Hero() {
               className="js-reveal js-reveal-cta mt-8 flex flex-col gap-3 sm:flex-row lg:mt-9"
               style={{ "--reveal-delay": "560ms" } as CSSProperties}
             >
-              <a href="#prenota" className="btn-primary">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Scrivimi su WhatsApp
                 <span aria-hidden="true">→</span>
               </a>

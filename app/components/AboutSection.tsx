@@ -1,6 +1,8 @@
 import type { CSSProperties } from "react";
 import { RevealImage } from "./RevealImage";
 
+const whatsappUrl = "https://wa.me/393926788551";
+
 export function AboutSection() {
   return (
     <section
@@ -106,7 +108,12 @@ export function AboutSection() {
               className="js-reveal js-reveal-cta mt-9"
               style={{ "--reveal-delay": "660ms" } as CSSProperties}
             >
-              <a href="#servizi" className="btn-secondary">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
                 Scrivimi su WhatsApp
                 <span aria-hidden="true">→</span>
               </a>

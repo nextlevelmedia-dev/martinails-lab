@@ -1,6 +1,8 @@
 import type { CSSProperties } from "react";
 import { RevealImage } from "./RevealImage";
 
+const whatsappUrl = "https://wa.me/393926788551";
+
 export function LocationSection() {
   return (
     <section
@@ -31,7 +33,9 @@ export function LocationSection() {
               className="js-reveal mt-7 max-w-[500px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]"
               style={{ "--reveal-delay": "420ms" } as CSSProperties}
             >
-              Ricevo presso lo studio di Simona Acconciature, in un ambiente accogliente dove puoi rilassarti e dedicare del tempo a te e alla bellezza delle tue mani.
+              Ricevo presso lo studio di Simona Acconciature, in un ambiente
+              accogliente dove puoi rilassarti e dedicare del tempo a te e alla
+              bellezza delle tue mani.
             </p>
 
             <div
@@ -55,15 +59,25 @@ export function LocationSection() {
               className="js-reveal js-reveal-cta mt-9 flex flex-col gap-3 sm:flex-row"
               style={{ "--reveal-delay": "660ms" } as CSSProperties}
             >
-              <a href="#prenota" className="btn-primary">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Prenota ora
                 <span aria-hidden="true">→</span>
               </a>
 
-              <a href="#" className="btn-secondary">
-                Vedi la mappa
-                <span aria-hidden="true">↗</span>
-              </a>
+              <a
+  href="https://maps.app.goo.gl/qnUPxtExb1CkzmMKA"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary"
+>
+  Vedi la mappa
+  <span aria-hidden="true">↗</span>
+</a>
             </div>
           </div>
 

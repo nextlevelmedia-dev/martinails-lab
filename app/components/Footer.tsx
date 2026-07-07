@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const whatsappUrl = "https://wa.me/393926788551";
+
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -31,18 +33,22 @@ export function Footer() {
               <a href="#chi-sono" className="transition-colors hover:text-white">
                 Chi sono
               </a>
+
               <a href="#servizi" className="transition-colors hover:text-white">
                 Servizi
               </a>
+
               <a
                 href="#listino-prezzi"
                 className="transition-colors hover:text-white"
               >
                 Listino prezzi
               </a>
+
               <a href="#gallery" className="transition-colors hover:text-white">
                 Gallery
               </a>
+
               <a href="#contatti" className="transition-colors hover:text-white">
                 Contatti
               </a>
@@ -62,17 +68,20 @@ export function Footer() {
               </p>
 
               <a
-                href="tel:+393333333333"
+                href="tel:+393926788551"
                 className="block transition-colors hover:text-white"
               >
-                333 333 3333
+                392 678 8551
               </a>
 
               <a
-                href="#prenota"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex border border-[var(--pink)] px-6 py-3 text-[14px] font-medium text-white transition-colors hover:bg-[var(--pink)]"
               >
                 Prenota ora
+
                 <span className="ml-2" aria-hidden="true">
                   →
                 </span>

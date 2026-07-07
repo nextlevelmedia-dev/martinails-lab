@@ -83,7 +83,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Scrivi su WhatsApp"
-              className="flex size-11 items-center justify-center border border-[var(--pink)] text-[var(--pink)] transition-all duration-300 hover:bg-[var(--pink)] hover:text-white"
+              className="flex size-9 items-center justify-center border border-[var(--pink)] text-[var(--pink)] transition-all duration-300 hover:bg-[var(--pink)] hover:text-white"
             >
               <svg
                 viewBox="0 0 32 32"

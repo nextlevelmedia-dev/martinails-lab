@@ -1,5 +1,7 @@
 import type { CSSProperties } from "react";
 
+const whatsappUrl = "https://wa.me/393926788551";
+
 export function IntroSection() {
   return (
     <section
@@ -83,14 +85,21 @@ export function IntroSection() {
             className="js-reveal mx-auto mt-7 max-w-[660px] text-[15px] leading-[1.9] text-[var(--gray-dark)] sm:text-[16px] lg:text-[17px]"
             style={{ "--reveal-delay": "420ms" } as CSSProperties}
           >
-            Ogni trattamento nasce dall’ascolto delle tue esigenze, dalla cura delle tue mani e dalla scelta di uno stile che sappia valorizzarti, rappresentarti davvero e farti sentire sempre a tuo agio.
+            Ogni trattamento nasce dall’ascolto delle tue esigenze, dalla cura
+            delle tue mani e dalla scelta di uno stile che sappia valorizzarti,
+            rappresentarti davvero e farti sentire sempre a tuo agio.
           </p>
 
           <div
             className="js-reveal js-reveal-cta mt-9 flex justify-center"
             style={{ "--reveal-delay": "560ms" } as CSSProperties}
           >
-            <a href="#chi-sono" className="btn-secondary">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
               Scrivimi su WhatsApp
               <span aria-hidden="true">→</span>
             </a>
