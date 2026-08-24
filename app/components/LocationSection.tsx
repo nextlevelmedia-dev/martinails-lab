@@ -33,9 +33,9 @@ export function LocationSection() {
               className="js-reveal mt-7 max-w-[500px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]"
               style={{ "--reveal-delay": "420ms" } as CSSProperties}
             >
-              Ricevo presso lo studio di Simona Acconciature, in un ambiente
-              accogliente dove puoi rilassarti e dedicare del tempo a te e alla
-              bellezza delle tue mani.
+              Ricevo a Cremona presso lo studio di Simona Acconciature, in un
+              ambiente accogliente dove puoi rilassarti, dedicare del tempo a te
+              e prenderti cura della bellezza delle tue mani.
             </p>
 
             <div
@@ -47,7 +47,7 @@ export function LocationSection() {
               </p>
 
               <p className="mt-2 text-[22px] font-normal leading-[1.3] tracking-[-0.02em] text-[var(--foreground)] sm:text-[24px]">
-                Via Giordano 78E
+                Via Giordano 78E, Cremona
               </p>
 
               <p className="mt-1 text-[14px] leading-[1.7] text-[var(--gray-dark)] sm:text-[15px]">
@@ -70,21 +70,21 @@ export function LocationSection() {
               </a>
 
               <a
-  href="https://maps.app.goo.gl/qnUPxtExb1CkzmMKA"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="btn-secondary"
->
-  Vedi la mappa
-  <span aria-hidden="true">↗</span>
-</a>
+                href="https://maps.app.goo.gl/qnUPxtExb1CkzmMKA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                Vedi la mappa
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </div>
 
           <div className="relative">
             <RevealImage
               src="/images/Dietro-le-quinte.webp"
-              alt="Studio Martinails Lab"
+              alt="Studio Martinails Lab a Cremona"
               direction="right"
               aspectClassName="aspect-[4/3] lg:aspect-[1.35/1]"
               sizes="(max-width: 1024px) 100vw, 55vw"
@@ -103,7 +103,7 @@ export function LocationSection() {
               </p>
 
               <p className="mt-1 text-[15px] text-[var(--foreground)]">
-                Ti aspetto in studio
+                Ti aspetto in studio a Cremona
               </p>
             </div>
           </div>
