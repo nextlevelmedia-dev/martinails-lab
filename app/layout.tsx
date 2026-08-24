@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -68,6 +69,38 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body className={`${cormorant.variable} ${inter.variable} antialiased`}>
+        <Script
+          id="iubenda-config"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var _iub = _iub || [];
+              _iub.csConfiguration = {
+                "siteId": 3847640,
+                "cookiePolicyId": 38599386,
+                "storage": {
+                  "useSiteId": true
+                }
+              };
+              _iub.csLangConfiguration = {
+                "it": {
+                  "cookiePolicyId": 38599386
+                }
+              };
+            `,
+          }}
+        />
+
+        <Script
+          src="https://cs.iubenda.com/autoblocking/3847640.js"
+          strategy="beforeInteractive"
+        />
+
+        <Script
+          src="https://cdn.iubenda.com/cs/iubenda_cs.js"
+          strategy="afterInteractive"
+        />
+
         {children}
       </body>
     </html>
