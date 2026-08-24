@@ -8,11 +8,11 @@ const phoneLabel = "+39 392 678 8551";
 const whatsappUrl = "https://wa.me/393926788551";
 
 const menuItems = [
-  { label: "Servizi", href: "#servizi" },
-  { label: "Chi sono", href: "#chi-sono" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Listino prezzi", href: "#listino-prezzi" },
-  { label: "Contatti", href: "#contatti" },
+  { label: "Servizi", href: "/#servizi" },
+  { label: "Chi sono", href: "/#chi-sono" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Listino prezzi", href: "/#listino-prezzi" },
+  { label: "Contatti", href: "/#contatti" },
 ];
 
 export function Header() {
@@ -32,7 +32,7 @@ export function Header() {
     <>
       <header className="fixed left-0 top-0 z-[70] w-full border-b border-[var(--border)] bg-[var(--background)]/90 backdrop-blur-md">
         <div className="container-site flex h-24 items-center justify-between">
-          <a href="#home" aria-label="Martinails Lab" onClick={closeMenu}>
+          <a href="/#home" aria-label="Martinails Lab" onClick={closeMenu}>
             <Image
               src="/logo/logo.png"
               alt="Martinails Lab"
@@ -95,30 +95,30 @@ export function Header() {
             </a>
 
             <button
-  type="button"
-  onClick={() => setIsOpen((current) => !current)}
-  className="relative flex size-11 shrink-0 flex-col items-center justify-center gap-[10px]"
-  aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
-  aria-expanded={isOpen}
->
-  <span
-    className={`block h-px w-8 bg-black transition-all duration-300 ${
-      isOpen ? "translate-y-[11px] rotate-45" : ""
-    }`}
-  />
+              type="button"
+              onClick={() => setIsOpen((current) => !current)}
+              className="relative flex size-11 shrink-0 flex-col items-center justify-center gap-[10px]"
+              aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
+              aria-expanded={isOpen}
+            >
+              <span
+                className={`block h-px w-8 bg-black transition-all duration-300 ${
+                  isOpen ? "translate-y-[11px] rotate-45" : ""
+                }`}
+              />
 
-  <span
-    className={`block h-px w-8 bg-black transition-all duration-300 ${
-      isOpen ? "opacity-0" : ""
-    }`}
-  />
+              <span
+                className={`block h-px w-8 bg-black transition-all duration-300 ${
+                  isOpen ? "opacity-0" : ""
+                }`}
+              />
 
-  <span
-    className={`block h-px w-8 bg-black transition-all duration-300 ${
-      isOpen ? "-translate-y-[11px] -rotate-45" : ""
-    }`}
-  />
-</button>
+              <span
+                className={`block h-px w-8 bg-black transition-all duration-300 ${
+                  isOpen ? "-translate-y-[11px] -rotate-45" : ""
+                }`}
+              />
+            </button>
           </div>
         </div>
       </header>
