@@ -1,10 +1,14 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { SplitTextEffect } from "./SplitTextEffect";
+import { RevealOnScroll } from "./RevealOnScroll";
 
 const galleryImages = Array.from(
   { length: 36 },
@@ -88,23 +92,36 @@ export function GalleryPage() {
     <>
       <Header />
 
+      {/* Stesse animazioni utilizzate nella homepage */}
+      <SplitTextEffect />
+      <RevealOnScroll />
+
       <main className="min-h-screen bg-white">
         <section className="pb-20 pt-36 sm:pb-24 sm:pt-40 lg:pb-28 lg:pt-44">
           <div className="container-site">
             {/* INTRO */}
             <div className="mx-auto max-w-[760px] text-center">
-              <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
+              <p
+                className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+                style={{ "--reveal-delay": "100ms" } as CSSProperties}
+              >
                 Gallery
               </p>
 
-              <h1 className="text-[42px] font-normal leading-[1.02] tracking-[-0.03em] text-[var(--foreground)] sm:text-[54px] lg:text-[64px]">
+              <h1 className="js-split-title text-[42px] font-normal leading-[1.02] tracking-[-0.03em] text-[var(--foreground)] sm:text-[54px] lg:text-[64px]">
                 Dettagli, colori e stili che raccontano qualcosa di te
                 <span className="text-[var(--pink)]">.</span>
               </h1>
 
-              <div className="mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]" />
+              <div
+                className="js-reveal mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]"
+                style={{ "--reveal-delay": "300ms" } as CSSProperties}
+              />
 
-              <p className="mx-auto mt-7 max-w-[590px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]">
+              <p
+                className="js-reveal mx-auto mt-7 max-w-[590px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]"
+                style={{ "--reveal-delay": "420ms" } as CSSProperties}
+              >
                 Una raccolta di nail art diverse, dalle più delicate alle più
                 elaborate, per lasciarti ispirare e trovare lo stile che senti
                 più tuo.
@@ -119,7 +136,12 @@ export function GalleryPage() {
                   type="button"
                   onClick={() => setSelectedIndex(index)}
                   aria-label={`Apri nail art ${index + 1}`}
-                  className="group relative block w-full cursor-zoom-in overflow-hidden bg-[var(--gray)] text-left"
+                  className="js-reveal group relative block w-full cursor-zoom-in overflow-hidden bg-[var(--gray)] text-left"
+                  style={
+                    {
+                      "--reveal-delay": `${(index % 4) * 90}ms`,
+                    } as CSSProperties
+                  }
                 >
                   <div className="relative aspect-[4/5]">
                     <Image
@@ -141,7 +163,10 @@ export function GalleryPage() {
             </div>
 
             {/* BACK HOME */}
-            <div className="mt-12 flex justify-center sm:mt-14">
+            <div
+              className="js-reveal js-reveal-cta mt-12 flex justify-center sm:mt-14"
+              style={{ "--reveal-delay": "150ms" } as CSSProperties}
+            >
               <Link href="/" className="btn-secondary">
                 Torna alla home
                 <span aria-hidden="true">←</span>
