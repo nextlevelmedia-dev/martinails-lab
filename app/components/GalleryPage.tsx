@@ -3,9 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 const galleryImages = Array.from(
-  { length: 20 },
+  { length: 36 },
   (_, index) => `/images/tornado/gallery${index + 1}.webp`
 );
 
@@ -84,9 +86,12 @@ export function GalleryPage() {
 
   return (
     <>
+      <Header />
+
       <main className="min-h-screen bg-white">
-        <section className="pb-20 pt-10 sm:pb-24 sm:pt-14 lg:pb-28 lg:pt-16">
+        <section className="pb-20 pt-36 sm:pb-24 sm:pt-40 lg:pb-28 lg:pt-44">
           <div className="container-site">
+            {/* INTRO */}
             <div className="mx-auto max-w-[760px] text-center">
               <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]">
                 Gallery
@@ -104,33 +109,19 @@ export function GalleryPage() {
                 elaborate, per lasciarti ispirare e trovare lo stile che senti
                 più tuo.
               </p>
-
-              <div className="mt-8 flex justify-center">
-                <Link href="/#gallery" className="btn-secondary">
-                  Torna al sito
-                  <span aria-hidden="true">←</span>
-                </Link>
-              </div>
             </div>
 
-            <div className="mt-14 columns-2 gap-3 sm:mt-16 sm:columns-3 sm:gap-4 lg:columns-4 lg:gap-5">
+            {/* GALLERY */}
+            <div className="mt-14 grid grid-cols-2 gap-3 sm:mt-16 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
               {galleryImages.map((src, index) => (
                 <button
                   key={src}
                   type="button"
                   onClick={() => setSelectedIndex(index)}
                   aria-label={`Apri nail art ${index + 1}`}
-                  className="group relative mb-3 block w-full cursor-zoom-in overflow-hidden bg-[var(--gray)] text-left sm:mb-4 lg:mb-5"
+                  className="group relative block w-full cursor-zoom-in overflow-hidden bg-[var(--gray)] text-left"
                 >
-                  <div
-                    className={
-                      index % 5 === 0 || index % 5 === 3
-                        ? "relative aspect-[4/5]"
-                        : index % 5 === 1
-                          ? "relative aspect-[4/6]"
-                          : "relative aspect-[4/5.5]"
-                    }
-                  >
+                  <div className="relative aspect-[4/5]">
                     <Image
                       src={src}
                       alt={`Nail art Martinails Lab ${index + 1}`}
@@ -149,8 +140,9 @@ export function GalleryPage() {
               ))}
             </div>
 
+            {/* BACK HOME */}
             <div className="mt-12 flex justify-center sm:mt-14">
-              <Link href="/#gallery" className="btn-secondary">
+              <Link href="/" className="btn-secondary">
                 Torna alla home
                 <span aria-hidden="true">←</span>
               </Link>
@@ -159,15 +151,19 @@ export function GalleryPage() {
         </section>
       </main>
 
+      <Footer />
+
+      {/* LIGHTBOX */}
       {selectedIndex !== null && (
         <div
           role="dialog"
           aria-modal="true"
           aria-label="Visualizzazione immagine"
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/[0.98]"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
+          {/* CLOSE */}
           <button
             type="button"
             onClick={closeLightbox}
@@ -177,11 +173,13 @@ export function GalleryPage() {
             ×
           </button>
 
+          {/* COUNTER */}
           <p className="absolute left-4 top-5 z-20 text-[12px] font-medium tracking-[0.18em] text-white/60 sm:left-6 sm:top-7">
             {String(selectedIndex + 1).padStart(2, "0")} /{" "}
             {String(galleryImages.length).padStart(2, "0")}
           </p>
 
+          {/* PREVIOUS */}
           <button
             type="button"
             onClick={showPrevious}
@@ -191,6 +189,7 @@ export function GalleryPage() {
             ←
           </button>
 
+          {/* IMAGE */}
           <div className="relative h-[82vh] w-[82vw] sm:h-[86vh] sm:w-[76vw] lg:w-[68vw]">
             <Image
               key={galleryImages[selectedIndex]}
@@ -203,6 +202,7 @@ export function GalleryPage() {
             />
           </div>
 
+          {/* NEXT */}
           <button
             type="button"
             onClick={showNext}
@@ -212,6 +212,7 @@ export function GalleryPage() {
             →
           </button>
 
+          {/* CLICK BACKDROP TO CLOSE */}
           <button
             type="button"
             onClick={closeLightbox}

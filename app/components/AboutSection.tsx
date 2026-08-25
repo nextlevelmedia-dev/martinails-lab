@@ -57,7 +57,7 @@ export function AboutSection() {
 
               <div className="relative z-10 w-full">
                 <RevealImage
-                  src="/images/about/about1.JPG"
+                  src="/images/about/about_me.webp"
                   alt="Martina di Martinails Lab"
                   direction="left"
                   aspectClassName="aspect-[4/4.6]"
