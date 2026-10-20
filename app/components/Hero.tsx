@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { RevealImage } from "./RevealImage";
+import { HeroMarquee } from "./HeroMarquee";
 
 const trustItems = [
   {
@@ -108,49 +108,7 @@ export function Hero() {
           </div>
 
           <div className="relative order-1 lg:order-2">
-            <RevealImage
-              src="/images/hero.webp"
-              alt="Nail art rosa realizzata da Martinails Lab"
-              direction="right"
-              aspectClassName="aspect-[4/3] lg:aspect-square"
-              priority
-              sizes="(max-width: 1024px) 100vw, 55vw"
-            />
-
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 z-20 overflow-hidden"
-            >
-              <span className="sparkle sparkle-slow absolute bottom-[43%] left-[62%] text-[18px] sm:text-[22px] lg:text-[26px]">
-                ✦
-              </span>
-
-              <span className="sparkle sparkle-delay-1 absolute bottom-[34%] left-[74%] text-[16px] sm:text-[20px] lg:text-[24px]">
-                ✧
-              </span>
-
-              <span className="sparkle sparkle-delay-2 absolute bottom-[21%] left-[71%] text-[14px] sm:text-[18px] lg:text-[22px]">
-                ✦
-              </span>
-
-              <span className="sparkle sparkle-delay-1 absolute bottom-[58%] left-[49%] text-[12px] sm:text-[16px] lg:text-[20px]">
-                ✧
-              </span>
-
-              <span className="pearl pearl-delay-1 absolute bottom-[39%] left-[66%] h-[6px] w-[6px] sm:h-[8px] sm:w-[8px]" />
-
-              <span className="pearl pearl-delay-3 absolute bottom-[27%] left-[82%] h-[5px] w-[5px] sm:h-[7px] sm:w-[7px]" />
-
-              <span className="absolute bottom-[51%] left-[55%] h-[3px] w-[3px] rounded-full bg-white opacity-80 shadow-[0_0_9px_rgba(255,255,255,0.95)]" />
-
-              <span className="absolute bottom-[30%] left-[59%] h-[4px] w-[4px] rounded-full bg-white opacity-70 shadow-[0_0_10px_rgba(255,255,255,0.95)]" />
-
-              <span className="sparkle sparkle-delay-2 absolute bottom-[12%] left-[20%] text-[13px] sm:text-[16px]">
-                ✦
-              </span>
-
-              <span className="pearl pearl-delay-1 absolute bottom-[17%] left-[10%] h-[6px] w-[6px] sm:h-[8px] sm:w-[8px]" />
-            </div>
+            <HeroMarquee />
           </div>
         </div>
       </div>
