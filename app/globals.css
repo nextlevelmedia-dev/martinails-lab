@@ -348,3 +348,56 @@ img {
     animation: none;
   }
 }
+
+/* Ingresso hero solo CSS: parte al primo paint, senza attendere l'idratazione */
+.hero-reveal {
+  animation: heroReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.hero-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.18em;
+  margin-bottom: -0.18em;
+}
+
+.hero-word-inner {
+  display: inline-block;
+  animation: heroWordIn 1.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--word-index, 0) * 75ms);
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes heroWordIn {
+  from {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(105%) rotate(0.6deg);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reveal,
+  .hero-word-inner {
+    animation: none;
+  }
+}

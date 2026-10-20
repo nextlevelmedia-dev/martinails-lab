@@ -7,31 +7,9 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Observer } from "gsap/Observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { galleryImages } from "../lib/site";
 
-const galleryImages = [
-  "/images/tornado/gallery1.webp",
-  "/images/tornado/gallery2.webp",
-  "/images/tornado/gallery3.webp",
-  "/images/tornado/gallery4.webp",
-  "/images/tornado/gallery5.webp",
-  "/images/tornado/gallery6.webp",
-  "/images/tornado/gallery7.webp",
-  "/images/tornado/gallery8.webp",
-  "/images/tornado/gallery9.webp",
-  "/images/tornado/gallery10.webp",
-  "/images/tornado/gallery11.webp",
-  "/images/tornado/gallery12.webp",
-  "/images/tornado/gallery13.webp",
-  "/images/tornado/gallery14.webp",
-  "/images/tornado/gallery15.webp",
-  "/images/tornado/gallery16.webp",
-  "/images/tornado/gallery17.webp",
-  "/images/tornado/gallery18.webp",
-  "/images/tornado/gallery19.webp",
-  "/images/tornado/gallery20.webp",
-];
-
-const tornadoImages = galleryImages;
+const tornadoImages = galleryImages.slice(0, 20);
 
 export function GalleryTornado() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -288,15 +266,15 @@ export function GalleryTornado() {
           ref={listRef}
           className="relative h-full w-full [perspective:75em] [transform-style:preserve-3d]"
         >
-          {tornadoImages.map((src, index) => (
+          {tornadoImages.map((image) => (
             <div
-              key={`${src}-${index}`}
+              key={image.src}
               data-tornado-item
               className="invisible absolute left-1/2 top-1/2 h-[220px] w-[176px] overflow-hidden bg-[var(--gray)] [backface-visibility:visible] [transform-style:preserve-3d] will-change-transform sm:h-[260px] sm:w-[208px] lg:h-[300px] lg:w-[240px]"
             >
               <Image
-                src={src}
-                alt={`Nail art Martinails Lab ${index + 1}`}
+                src={image.src}
+                alt={image.alt}
                 fill
                 sizes="(max-width: 640px) 176px, (max-width: 1024px) 208px, 240px"
                 className="pointer-events-none select-none object-cover brightness-[1.08] contrast-[0.92] saturate-[0.9]"

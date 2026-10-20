@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { site } from "./lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://martinails-lab.com/sitemap.xml",
-    host: "https://martinails-lab.com",
+    sitemap: `${site.url}/sitemap.xml`,
   };
 }

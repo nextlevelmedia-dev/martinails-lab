@@ -21,41 +21,60 @@ const trustItems = [
 
 const whatsappUrl = "https://wa.me/393926788551";
 
+const titleWords =
+  "Esprimi chi sei con unghie raffinate che valorizzano il tuo stile e la tua personalità".split(
+    " "
+  );
+
 export function Hero() {
   return (
     <section id="home" className="pt-28 pb-20 lg:pt-40 lg:pb-24">
       <div className="container-site">
         <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div className="order-2 lg:order-1">
-            <p
-              className="js-reveal mb-5 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)] lg:mb-6"
+            <h1
+              className="hero-reveal mb-5 font-[family-name:var(--font-body)] text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)] lg:mb-6"
               style={{ "--reveal-delay": "100ms" } as CSSProperties}
             >
-              Nail art e decorazione
-            </p>
-
-            <h1 className="js-split-title max-w-[540px] text-[43px] font-normal leading-[0.98] tracking-[-0.035em] text-black sm:text-[52px] lg:text-[64px]">
-              Esprimi chi sei con unghie raffinate che valorizzano il tuo stile
-              e la tua personalità
-              <span className="text-[var(--pink)]">.</span>
+              Nail art e ricostruzione unghie a Cremona
             </h1>
 
+            {/* Titolo animato solo in CSS: è l'elemento LCP e deve comparire senza attendere il JavaScript */}
+            <p className="max-w-[540px] font-[family-name:var(--font-heading)] text-[43px] font-normal leading-[0.98] tracking-[-0.035em] text-black sm:text-[52px] lg:text-[64px]">
+              {titleWords.map((word, index) => (
+                <span key={index}>
+                  <span className="hero-word">
+                    <span
+                      className="hero-word-inner"
+                      style={{ "--word-index": index } as CSSProperties}
+                    >
+                      {word}
+                      {index === titleWords.length - 1 && (
+                        <span className="text-[var(--pink)]">.</span>
+                      )}
+                    </span>
+                  </span>{" "}
+                </span>
+              ))}
+            </p>
+
             <div
-              className="js-reveal mt-6 h-[2px] w-20 bg-[var(--pink)]"
+              className="hero-reveal mt-6 h-[2px] w-20 bg-[var(--pink)]"
               style={{ "--reveal-delay": "300ms" } as CSSProperties}
             />
 
             <p
-              className="js-reveal mt-6 max-w-[520px] text-[16px] leading-[1.8] text-[var(--gray-dark)] lg:text-[17px]"
+              className="hero-reveal mt-6 max-w-[520px] text-[16px] leading-[1.8] text-[var(--gray-dark)] lg:text-[17px]"
               style={{ "--reveal-delay": "420ms" } as CSSProperties}
             >
               Dalle decorazioni più delicate alle creazioni più elaborate, ogni
               nail art è pensata per valorizzare le tue mani, completare il tuo
-              look e raccontare qualcosa di te in ogni dettaglio.
+              look e raccontare qualcosa di te in ogni dettaglio. Ti aspetto nel
+              mio studio a Cremona.
             </p>
 
             <div
-              className="js-reveal js-reveal-cta mt-8 flex flex-col gap-3 sm:flex-row lg:mt-9"
+              className="hero-reveal mt-8 flex flex-col gap-3 sm:flex-row lg:mt-9"
               style={{ "--reveal-delay": "560ms" } as CSSProperties}
             >
               <a

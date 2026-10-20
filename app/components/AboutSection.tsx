@@ -58,7 +58,7 @@ export function AboutSection() {
               <div className="relative z-10 w-full">
                 <RevealImage
                   src="/images/about/about_me.webp"
-                  alt="Martina di Martinails Lab"
+                  alt="Martina, onicotecnica e nail artist di Martinails Lab a Cremona"
                   direction="left"
                   aspectClassName="aspect-[4/4.6]"
                   sizes="(max-width: 640px) calc(100vw - 64px), (max-width: 1024px) 380px, 500px"

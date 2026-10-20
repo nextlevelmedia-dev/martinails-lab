@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const phoneNumber = "+393926788551";
@@ -32,26 +33,26 @@ export function Header() {
     <>
       <header className="fixed left-0 top-0 z-[70] w-full border-b border-[var(--border)] bg-[var(--background)]/90 backdrop-blur-md">
         <div className="container-site flex h-24 items-center justify-between">
-          <a href="/#home" aria-label="Martinails Lab" onClick={closeMenu}>
+          <Link href="/#home" aria-label="Martinails Lab" onClick={closeMenu}>
             <Image
               src="/logo/logo.png"
               alt="Martinails Lab"
               width={44}
               height={44}
-              priority
+              loading="eager"
               className="h-12 w-auto"
             />
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-12 lg:flex">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="text-[15px] font-medium transition-colors duration-300 hover:text-[var(--pink)]"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -133,7 +134,7 @@ export function Header() {
         <div className="container-site flex min-h-dvh flex-col pb-8 pt-32">
           <nav className="flex flex-col">
             {menuItems.map((item, index) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 onClick={closeMenu}
@@ -149,7 +150,7 @@ export function Header() {
                 }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 

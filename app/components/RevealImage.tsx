@@ -8,7 +8,6 @@ type RevealImageProps = {
   alt: string;
   direction?: "left" | "right";
   aspectClassName?: string;
-  priority?: boolean;
   sizes?: string;
 };
 
@@ -17,7 +16,6 @@ export function RevealImage({
   alt,
   direction = "left",
   aspectClassName = "aspect-[16/10]",
-  priority = false,
   sizes = "(max-width: 1024px) 100vw, 600px",
 }: RevealImageProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -27,11 +25,6 @@ export function RevealImage({
     const element = wrapperRef.current;
 
     if (!element) return;
-
-    if (!("IntersectionObserver" in window)) {
-      setIsVisible(true);
-      return;
-    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -90,7 +83,6 @@ export function RevealImage({
           src={src}
           alt={alt}
           fill
-          priority={priority}
           sizes={sizes}
           className="object-cover brightness-[1.04] contrast-[0.98] saturate-[0.97] sepia-[0.025]"
         />

@@ -9,21 +9,21 @@ const benefits = [
     title: "Ricostruzione unghie",
     text: "Se desideri unghie più resistenti, curate e armoniose, con una forma studiata per valorizzare le tue mani.",
     image: "/images/showcase1.webp",
-    alt: "Ricostruzione unghie",
+    alt: "Ricostruzione unghie squadrate con french rosa leopardata a Cremona",
   },
   {
     eyebrow: "Naturalezza e flessibilità",
     title: "Gel flessibile",
     text: "Se desideri un risultato naturale, sottile e confortevole, che rinforzi le tue unghie mantenendo un aspetto leggero e armonioso.",
     image: "/images/showcase2.webp",
-    alt: "Gel flessibile",
+    alt: "Trattamento in gel flessibile su unghie naturali a Cremona",
   },
   {
     eyebrow: "Resistenza e brillantezza",
     title: "Gel rigido",
     text: "Se desideri unghie definite, eleganti e resistenti, con un risultato curato che mantiene bellezza e brillantezza nel tempo.",
     image: "/images/showcase3.webp",
-    alt: "Gel rigido",
+    alt: "Copertura in gel rigido per unghie resistenti a Cremona",
   },
 ];
 

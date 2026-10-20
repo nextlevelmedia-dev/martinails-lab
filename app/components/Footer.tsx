@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 
 const whatsappUrl = "https://wa.me/393926788551";
@@ -29,8 +28,9 @@ export function Footer() {
               />
 
               <p className="mt-6 max-w-[360px] text-[14px] leading-[1.8] text-white/65">
-                Nail art e decorazioni per unghie raffinate, curate nei dettagli
-                e pensate per valorizzare ogni mano con eleganza.
+                Nail art, ricostruzione unghie e gel a Cremona: decorazioni
+                raffinate, curate nei dettagli e pensate per valorizzare ogni
+                mano con eleganza.
               </p>
             </div>
 
@@ -41,40 +41,40 @@ export function Footer() {
               </p>
 
               <nav className="flex flex-col gap-3 text-[15px] text-white/75">
-                <a
+                <Link
                   href="/#chi-sono"
                   className="transition-colors hover:text-white"
                 >
                   Chi sono
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/#servizi"
                   className="transition-colors hover:text-white"
                 >
                   Servizi
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/#listino-prezzi"
                   className="transition-colors hover:text-white"
                 >
                   Listino prezzi
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/gallery"
                   className="transition-colors hover:text-white"
                 >
                   Gallery
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/#contatti"
                   className="transition-colors hover:text-white"
                 >
                   Contatti
-                </a>
+                </Link>
               </nav>
             </div>
 
@@ -85,17 +85,26 @@ export function Footer() {
               </p>
 
               <div className="space-y-4 text-[15px] leading-[1.7] text-white/75">
-                <p>
-                  Via Giordano 78E, Cremona
+                <address className="not-italic">
+                  Via del Giordano 78E, 26100 Cremona (CR)
                   <br />
                   Presso Simona Acconciature
-                </p>
+                </address>
 
                 <a
                   href="tel:+393926788551"
                   className="block transition-colors hover:text-white"
                 >
                   392 678 8551
+                </a>
+
+                <a
+                  href="https://www.instagram.com/martinails.lab/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block transition-colors hover:text-white"
+                >
+                  Instagram @martinails.lab
                 </a>
 
                 <a

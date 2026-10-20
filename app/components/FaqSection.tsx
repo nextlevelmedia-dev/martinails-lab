@@ -2,34 +2,7 @@
 
 import type { CSSProperties } from "react";
 import { useState } from "react";
-
-const faqs = [
-  {
-    question: "Quanto tempo richiede ogni trattamento?",
-    answer:
-      "La durata varia in base al trattamento scelto e al tipo di lavorazione. Un servizio più semplice richiede meno tempo, mentre ricostruzioni, allungamenti e nail art elaborate possono richiedere una seduta più lunga. Al momento della prenotazione potremo valutare insieme il servizio più adatto.",
-  },
-  {
-    question: "Le unghie respirano?",
-    answer:
-      "No, le unghie non respirano perché sono composte principalmente da cheratina. Ciò che conta è lavorare nel rispetto dell’unghia naturale, utilizzare prodotti di qualità e seguire correttamente i tempi di mantenimento e rimozione.",
-  },
-  {
-    question: "Ogni quanto tempo è consigliato fare il refill?",
-    answer:
-      "In genere il refill è consigliato ogni 3 o 4 settimane. La frequenza può variare in base alla velocità di crescita dell’unghia naturale, alla lunghezza e al tipo di trattamento realizzato.",
-  },
-  {
-    question: "Il gel può dare una sensazione di calore?",
-    answer:
-      "Durante la polimerizzazione può capitare di percepire una breve sensazione di calore. L’intensità può variare da persona a persona ed è generalmente temporanea. Ogni trattamento viene eseguito prestando attenzione al comfort durante tutte le fasi.",
-  },
-  {
-    question: "Posso scegliere una nail art personalizzata?",
-    answer:
-      "Certo. Colori, forme e decorazioni possono essere studiate insieme per creare un risultato personale e armonioso. Puoi partire da un’ispirazione oppure affidarti a una proposta pensata per le tue mani e il tuo stile.",
-  },
-];
+import { faqs } from "../lib/site";
 
 export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);

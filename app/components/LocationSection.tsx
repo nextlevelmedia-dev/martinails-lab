@@ -47,7 +47,7 @@ export function LocationSection() {
               </p>
 
               <p className="mt-2 text-[22px] font-normal leading-[1.3] tracking-[-0.02em] text-[var(--foreground)] sm:text-[24px]">
-                Via Giordano 78E, Cremona
+                Via del Giordano 78E, 26100 Cremona
               </p>
 
               <p className="mt-1 text-[14px] leading-[1.7] text-[var(--gray-dark)] sm:text-[15px]">
@@ -84,7 +84,7 @@ export function LocationSection() {
           <div className="relative">
             <RevealImage
               src="/images/Dietro-le-quinte.webp"
-              alt="Studio Martinails Lab a Cremona"
+              alt="Postazione nail art dello studio Martinails Lab a Cremona"
               direction="right"
               aspectClassName="aspect-[4/3] lg:aspect-[1.35/1]"
               sizes="(max-width: 1024px) 100vw, 55vw"

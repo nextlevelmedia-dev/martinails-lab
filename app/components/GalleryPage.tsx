@@ -9,11 +9,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { SplitTextEffect } from "./SplitTextEffect";
 import { RevealOnScroll } from "./RevealOnScroll";
-
-const galleryImages = Array.from(
-  { length: 36 },
-  (_, index) => `/images/tornado/gallery${index + 1}.webp`
-);
+import { galleryImages } from "../lib/site";
 
 export function GalleryPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -101,17 +97,17 @@ export function GalleryPage() {
           <div className="container-site">
             {/* INTRO */}
             <div className="mx-auto max-w-[760px] text-center">
-              <p
-                className="js-reveal mb-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
+              <h1
+                className="js-reveal mb-4 font-[family-name:var(--font-body)] text-[12px] font-medium uppercase tracking-[0.24em] text-[var(--pink)]"
                 style={{ "--reveal-delay": "100ms" } as CSSProperties}
               >
-                Gallery
-              </p>
+                Gallery nail art a Cremona
+              </h1>
 
-              <h1 className="js-split-title text-[42px] font-normal leading-[1.02] tracking-[-0.03em] text-[var(--foreground)] sm:text-[54px] lg:text-[64px]">
+              <h2 className="js-split-title text-[42px] font-normal leading-[1.02] tracking-[-0.03em] text-[var(--foreground)] sm:text-[54px] lg:text-[64px]">
                 Dettagli, colori e stili che raccontano qualcosa di te
                 <span className="text-[var(--pink)]">.</span>
-              </h1>
+              </h2>
 
               <div
                 className="js-reveal mx-auto mt-7 h-[2px] w-16 bg-[var(--pink)]"
@@ -122,20 +118,20 @@ export function GalleryPage() {
                 className="js-reveal mx-auto mt-7 max-w-[590px] text-[15px] leading-[1.85] text-[var(--gray-dark)] sm:text-[16px]"
                 style={{ "--reveal-delay": "420ms" } as CSSProperties}
               >
-                Una raccolta di nail art diverse, dalle più delicate alle più
-                elaborate, per lasciarti ispirare e trovare lo stile che senti
-                più tuo.
+                Una raccolta di nail art realizzate nel mio studio a Cremona,
+                dalle più delicate alle più elaborate, per lasciarti ispirare e
+                trovare lo stile che senti più tuo.
               </p>
             </div>
 
             {/* GALLERY */}
             <div className="mt-14 grid grid-cols-2 gap-3 sm:mt-16 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
-              {galleryImages.map((src, index) => (
+              {galleryImages.map((image, index) => (
                 <button
-                  key={src}
+                  key={image.src}
                   type="button"
                   onClick={() => setSelectedIndex(index)}
-                  aria-label={`Apri nail art ${index + 1}`}
+                  aria-label={`Ingrandisci: ${image.alt}`}
                   className="js-reveal group relative block w-full cursor-zoom-in overflow-hidden bg-[var(--gray)] text-left"
                   style={
                     {
@@ -145,8 +141,8 @@ export function GalleryPage() {
                 >
                   <div className="relative aspect-[4/5]">
                     <Image
-                      src={src}
-                      alt={`Nail art Martinails Lab ${index + 1}`}
+                      src={image.src}
+                      alt={image.alt}
                       fill
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
@@ -217,11 +213,11 @@ export function GalleryPage() {
           {/* IMAGE */}
           <div className="relative h-[82vh] w-[82vw] sm:h-[86vh] sm:w-[76vw] lg:w-[68vw]">
             <Image
-              key={galleryImages[selectedIndex]}
-              src={galleryImages[selectedIndex]}
-              alt={`Nail art Martinails Lab ${selectedIndex + 1}`}
+              key={galleryImages[selectedIndex].src}
+              src={galleryImages[selectedIndex].src}
+              alt={galleryImages[selectedIndex].alt}
               fill
-              priority
+              loading="eager"
               sizes="90vw"
               className="object-contain"
             />

@@ -1,9 +1,5 @@
 import Image from "next/image";
-
-const galleryImages = Array.from(
-  { length: 36 },
-  (_, index) => `/images/tornado/gallery${index + 1}.webp`
-);
+import { galleryImages } from "../lib/site";
 
 // Prima colonna: immagini dispari, seconda colonna: immagini pari
 const columns = [
@@ -24,21 +20,18 @@ export function HeroMarquee() {
             }`}
           >
             {/* Lista duplicata per un loop continuo */}
-            {[...images, ...images].map((src, index) => (
+            {[...images, ...images].map((image, index) => (
               <div
-                key={`${src}-${index}`}
+                key={`${image.src}-${index}`}
                 className="relative mb-3 aspect-[3/4] w-full shrink-0 overflow-hidden lg:mb-4"
                 aria-hidden={index >= images.length ? "true" : undefined}
               >
                 <Image
-                  src={src}
-                  alt={
-                    index < images.length
-                      ? "Nail art realizzata da Martinails Lab"
-                      : ""
-                  }
+                  src={image.src}
+                  alt={index < images.length ? image.alt : ""}
                   fill
-                  priority={index < 2}
+                  loading={index < 2 ? "eager" : "lazy"}
+                  fetchPriority={index === 0 ? "high" : "auto"}
                   sizes="(max-width: 1024px) 50vw, 27vw"
                   className="object-cover"
                 />

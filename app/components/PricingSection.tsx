@@ -1,48 +1,7 @@
-"use client";
-
 import type { CSSProperties } from "react";
+import { services as prices } from "../lib/site";
 
 const whatsappUrl = "https://wa.me/393926788551";
-
-const prices = [
-  {
-    name: "Manicure normale",
-    detail: "Pulizia, forma e cura dell’unghia naturale.",
-    price: "20 €",
-  },
-  {
-    name: "Gel flessibile",
-    detail: "Copertura leggera e confortevole per unghie curate e resistenti.",
-    price: "50 €",
-  },
-  {
-    name: "Gel rigido",
-    detail:
-      "Copertura più strutturata per un risultato resistente, definito e duraturo.",
-    price: "55 €",
-  },
-  {
-    name: "Allungamento",
-    detail:
-      "Ricostruzione con lunghezza e forma studiate in base alla mano.",
-    price: "85 €",
-  },
-  {
-    name: "Allungamento con muretto",
-    detail: "Ricostruzione elaborata con tecnica muretto.",
-    price: "Da 145 €",
-  },
-  {
-    name: "Unghia con muretto",
-    detail: "Durante semplice copertura gel.",
-    price: "+5 € l’una",
-  },
-  {
-    name: "Disegni e applicazioni",
-    detail: "Decorazioni incluse nel trattamento.",
-    price: "Gratis",
-  },
-];
 
 export function PricingSection() {
   return (
